@@ -1,3 +1,8 @@
+VemlTorzslapBundle:
+    resource: "@VemlTorzslapBundle/Controller/"
+    type:     annotation
+    prefix:   /torzslap
+
 VemlHelloBundle:
     resource: "@VemlHelloBundle/Resources/config/routing.yml"
     prefix:   /
