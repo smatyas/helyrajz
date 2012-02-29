@@ -1,7 +1,7 @@
 Pápai várostörténeti helyrajzi feltárás
 =======================================
 
-Ez a projekt Somfai Balázs kérésére készült, a pápai várostörténeti helyrajzi feltárás elősegítéséhez.
+Ez a symfonys webes alkalmazás Somfai Balázs kérésére készült, a pápai várostörténeti helyrajzi feltárás elősegítéséhez.
 
 1) Telepítés
 ------------
