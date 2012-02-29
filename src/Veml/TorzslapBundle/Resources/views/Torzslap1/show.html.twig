@@ -1,0 +1,185 @@
+<h1>Torzslap1</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Sor_kot</th>
+            <td>{{ entity.sorkot }}</td>
+        </tr>
+        <tr>
+            <th>Lap</th>
+            <td>{{ entity.lap }}</td>
+        </tr>
+        <tr>
+            <th>Oldal</th>
+            <td>{{ entity.oldal }}</td>
+        </tr>
+        <tr>
+            <th>Oszlop</th>
+            <td>{{ entity.oszlop }}</td>
+        </tr>
+        <tr>
+            <th>Hasab</th>
+            <td>{{ entity.hasab }}</td>
+        </tr>
+        <tr>
+            <th>Ev</th>
+            <td>{{ entity.ev }}</td>
+        </tr>
+        <tr>
+            <th>Folyoszam</th>
+            <td>{{ entity.folyoszam }}</td>
+        </tr>
+        <tr>
+            <th>Utca_telepules_szab</th>
+            <td>{{ entity.utcatelepulesszab }}</td>
+        </tr>
+        <tr>
+            <th>Utca_telepules_irva</th>
+            <td>{{ entity.utcatelepulesirva }}</td>
+        </tr>
+        <tr>
+            <th>Hazszam</th>
+            <td>{{ entity.hazszam }}</td>
+        </tr>
+        <tr>
+            <th>Haz_neve</th>
+            <td>{{ entity.hazneve }}</td>
+        </tr>
+        <tr>
+            <th>Megholt_neve_szab</th>
+            <td>{{ entity.megholtneveszab }}</td>
+        </tr>
+        <tr>
+            <th>Megholt_neve_irva</th>
+            <td>{{ entity.megholtneveirva }}</td>
+        </tr>
+        <tr>
+            <th>Neme_ffi</th>
+            <td>{{ entity.nemeffi }}</td>
+        </tr>
+        <tr>
+            <th>Neme_no</th>
+            <td>{{ entity.nemeno }}</td>
+        </tr>
+        <tr>
+            <th>Vallasa_rk</th>
+            <td>{{ entity.vallasark }}</td>
+        </tr>
+        <tr>
+            <th>Vallasa_ref</th>
+            <td>{{ entity.vallasaref }}</td>
+        </tr>
+        <tr>
+            <th>Vallasa_ev</th>
+            <td>{{ entity.vallasaev }}</td>
+        </tr>
+        <tr>
+            <th>Vallasa_izr</th>
+            <td>{{ entity.vallasaizr }}</td>
+        </tr>
+        <tr>
+            <th>Kora_ev</th>
+            <td>{{ entity.koraev }}</td>
+        </tr>
+        <tr>
+            <th>Kora_ho</th>
+            <td>{{ entity.koraho }}</td>
+        </tr>
+        <tr>
+            <th>Kora_het</th>
+            <td>{{ entity.korahet }}</td>
+        </tr>
+        <tr>
+            <th>Kora_nap</th>
+            <td>{{ entity.koranap }}</td>
+        </tr>
+        <tr>
+            <th>Kora_ora</th>
+            <td>{{ entity.koraora }}</td>
+        </tr>
+        <tr>
+            <th>Halva_szuletett</th>
+            <td>{{ entity.halvaszuletett }}</td>
+        </tr>
+        <tr>
+            <th>Foglalkozasa_szab</th>
+            <td>{{ entity.foglalkozasaszab }}</td>
+        </tr>
+        <tr>
+            <th>Allamp_fogl_viszony_irva</th>
+            <td>{{ entity.allampfoglviszonyirva }}</td>
+        </tr>
+        <tr>
+            <th>Cs_all_notlen_hajadon</th>
+            <td>{{ entity.csallnotlenhajadon }}</td>
+        </tr>
+        <tr>
+            <th>Cs_all_hazas</th>
+            <td>{{ entity.csallhazas }}</td>
+        </tr>
+        <tr>
+            <th>Cs_all_ozvegy</th>
+            <td>{{ entity.csallozvegy }}</td>
+        </tr>
+        <tr>
+            <th>Cs_all_elvalt</th>
+            <td>{{ entity.csallelvalt }}</td>
+        </tr>
+        <tr>
+            <th>Maradt_kk_es_vagyon</th>
+            <td>{{ entity.maradtkkesvagyon }}</td>
+        </tr>
+        <tr>
+            <th>Halal_ideje_ev</th>
+            <td>{{ entity.halalidejeev }}</td>
+        </tr>
+        <tr>
+            <th>Halal_ideje_ho</th>
+            <td>{{ entity.halalidejeho }}</td>
+        </tr>
+        <tr>
+            <th>Halal_ideje_nap</th>
+            <td>{{ entity.halalidejenap }}</td>
+        </tr>
+        <tr>
+            <th>Halal_oka_szab</th>
+            <td>{{ entity.halalokaszab }}</td>
+        </tr>
+        <tr>
+            <th>Halal_oka_irva</th>
+            <td>{{ entity.halalokairva }}</td>
+        </tr>
+        <tr>
+            <th>Tovabbi_egykoru_adat</th>
+            <td>{{ entity.tovabbiegykoruadat }}</td>
+        </tr>
+        <tr>
+            <th>Megjegyzesek</th>
+            <td>{{ entity.megjegyzesek }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('1_sz_torzslap') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('1_sz_torzslap_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('1_sz_torzslap_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>
