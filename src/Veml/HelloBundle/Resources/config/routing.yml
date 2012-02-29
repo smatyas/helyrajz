@@ -1,0 +1,3 @@
+VemlHelloBundle_homepage:
+    pattern:  /
+    defaults: { _controller: VemlHelloBundle:Default:index }
