@@ -1084,4 +1084,31 @@ class Torzslap1
     {
         return $this->megjegyzesek;
     }
+
+    /**
+     * Get Jelzet
+     *
+     * @return string
+     */
+    public function getJelzet()
+    {
+        return $this->getEv().":".$this->getFolyoszam();
+    }
+
+    /**
+     * Get Forráshely
+     *
+     * @return string
+     */
+    public function getForrashely()
+    {
+        $str = "";
+        if ($this->getSorKot() != "") $str .= $this->getSorKot()." sor., köt.; ";
+        if ($this->getLap() != "") $str .= $this->getLap()." lap ";
+        if ($this->getOldal() != "") $str .= $this->getOldal()." old. ";
+        if ($this->getOszlop() != "") $str .= $this->getOszlop()." op. ";
+        if ($this->getHasab() != "") $str .= $this->getHasab()." hb.";
+
+        return trim($str);
+    }
 }

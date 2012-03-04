@@ -1,117 +1,45 @@
 {% extends 'VemlHelloBundle::base.html.twig' %}
 
 {% block body %}
-<h1>Torzslap1 list</h1>
+<a href="{{ path('1_sz_torzslap_new') }}" class="btn btn-primary" style="margin-bottom: 1em;">
+    <i class="icon-plus icon-white"></i>
+    Új elem
+</a>
 
-<table class="records_list">
+<h1>1. sz. törzslapok</h1>
+
+<table class="table table-bordered records_list">
     <thead>
         <tr>
             <th>Id</th>
-            <th>Sor_kot</th>
-            <th>Lap</th>
-            <th>Oldal</th>
-            <th>Oszlop</th>
-            <th>Hasab</th>
-            <th>Ev</th>
-            <th>Folyoszam</th>
-            <th>Utca_telepules_szab</th>
-            <th>Utca_telepules_irva</th>
-            <th>Hazszam</th>
-            <th>Haz_neve</th>
-            <th>Megholt_neve_szab</th>
-            <th>Megholt_neve_irva</th>
-            <th>Neme_ffi</th>
-            <th>Neme_no</th>
-            <th>Vallasa_rk</th>
-            <th>Vallasa_ref</th>
-            <th>Vallasa_ev</th>
-            <th>Vallasa_izr</th>
-            <th>Kora_ev</th>
-            <th>Kora_ho</th>
-            <th>Kora_het</th>
-            <th>Kora_nap</th>
-            <th>Kora_ora</th>
-            <th>Halva_szuletett</th>
-            <th>Foglalkozasa_szab</th>
-            <th>Allap_fogl_viszony_irva</th>
-            <th>Cs_all_notlen_hajadon</th>
-            <th>Cs_all_hazas</th>
-            <th>Cs_all_ozvegy</th>
-            <th>Cs_all_elvalt</th>
-            <th>Maradt_kk_es_vagyon</th>
-            <th>Halal_ideje_ev</th>
-            <th>Halal_ideje_ho</th>
-            <th>Halal_ideje_nap</th>
-            <th>Halal_oka_szab</th>
-            <th>Halal_oka_irva</th>
-            <th>Tovabbi_egykoru_adat</th>
-            <th>Megjegyzesek</th>
-            <th>Actions</th>
+            <th>Jelzet</th>
+            <th>Forráshely</th>
+            <th>Műveletek</th>
         </tr>
     </thead>
     <tbody>
     {% for entity in entities %}
         <tr>
-            <td><a href="{{ path('1_sz_torzslap_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-            <td>{{ entity.sorkot }}</td>
-            <td>{{ entity.lap }}</td>
-            <td>{{ entity.oldal }}</td>
-            <td>{{ entity.oszlop }}</td>
-            <td>{{ entity.hasab }}</td>
-            <td>{{ entity.ev }}</td>
-            <td>{{ entity.folyoszam }}</td>
-            <td>{{ entity.utcatelepulesszab }}</td>
-            <td>{{ entity.utcatelepulesirva }}</td>
-            <td>{{ entity.hazszam }}</td>
-            <td>{{ entity.hazneve }}</td>
-            <td>{{ entity.megholtneveszab }}</td>
-            <td>{{ entity.megholtneveirva }}</td>
-            <td>{{ entity.nemeffi }}</td>
-            <td>{{ entity.nemeno }}</td>
-            <td>{{ entity.vallasark }}</td>
-            <td>{{ entity.vallasaref }}</td>
-            <td>{{ entity.vallasaev }}</td>
-            <td>{{ entity.vallasaizr }}</td>
-            <td>{{ entity.koraev }}</td>
-            <td>{{ entity.koraho }}</td>
-            <td>{{ entity.korahet }}</td>
-            <td>{{ entity.koranap }}</td>
-            <td>{{ entity.koraora }}</td>
-            <td>{{ entity.halvaszuletett }}</td>
-            <td>{{ entity.foglalkozasaszab }}</td>
-            <td>{{ entity.allapfoglviszonyirva }}</td>
-            <td>{{ entity.csallnotlenhajadon }}</td>
-            <td>{{ entity.csallhazas }}</td>
-            <td>{{ entity.csallozvegy }}</td>
-            <td>{{ entity.csallelvalt }}</td>
-            <td>{{ entity.maradtkkesvagyon }}</td>
-            <td>{{ entity.halalidejeev }}</td>
-            <td>{{ entity.halalidejeho }}</td>
-            <td>{{ entity.halalidejenap }}</td>
-            <td>{{ entity.halalokaszab }}</td>
-            <td>{{ entity.halalokairva }}</td>
-            <td>{{ entity.tovabbiegykoruadat }}</td>
-            <td>{{ entity.megjegyzesek }}</td>
+            <td>{{ entity.id }}</td>
+            <td>{{ entity.jelzet }}</td>
+            <td>{{ entity.forrashely }}</td>
             <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('1_sz_torzslap_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('1_sz_torzslap_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
+                <a href="{{ path('1_sz_torzslap_show', { 'id': entity.id }) }}" class="btn btn-info btn-mini">
+                    <i class="icon-eye-open icon-white"></i>
+                    megtekintés
+                </a>
+                <a href="{{ path('1_sz_torzslap_edit', { 'id': entity.id }) }}" class="btn btn-warning btn-mini">
+                    <i class="icon-pencil icon-white"></i>
+                    szerkesztés
+                </a>
             </td>
         </tr>
     {% endfor %}
     </tbody>
 </table>
 
-<ul>
-    <li>
-        <a href="{{ path('1_sz_torzslap_new') }}">
-            Create a new entry
-        </a>
-    </li>
-</ul>
+<a href="{{ path('1_sz_torzslap_new') }}" class="btn btn-primary">
+    <i class="icon-plus icon-white"></i>
+    Új elem
+</a>
 {% endblock %}
