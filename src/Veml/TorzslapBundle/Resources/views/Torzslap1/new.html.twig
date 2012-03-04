@@ -1,20 +1,17 @@
 {% extends 'VemlHelloBundle::base.html.twig' %}
+{% form_theme form 'VemlTorzslapBundle:Form:fields.html.twig' %}
 
 {% block body %}
-<h1>Torzslap1 creation</h1>
+<h1>Új törzslap felvétele</h1>
 
-<form action="{{ path('1_sz_torzslap_create') }}" method="post" {{ form_enctype(form) }}>
+<form action="{{ path('1_sz_torzslap_create') }}" method="post" {{ form_enctype(form) }} class="form-horizontal">
     {{ form_widget(form) }}
-    <p>
-        <button type="submit">Create</button>
-    </p>
-</form>
 
-<ul class="record_actions">
-    <li>
-        <a href="{{ path('1_sz_torzslap') }}">
-            Back to the list
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Mentés</button>
+        <a href="{{ path('1_sz_torzslap') }}" class="btn">
+            Vissza a listához
         </a>
-    </li>
-</ul>
+    </div>
+</form>
 {% endblock %}

@@ -1,26 +1,22 @@
 {% extends 'VemlHelloBundle::base.html.twig' %}
+{% form_theme edit_form 'VemlTorzslapBundle:Form:fields.html.twig' %}
 
 {% block body %}
-<h1>Torzslap1 edit</h1>
+<h1>Törzslap szerkesztése</h1>
 
-<form action="{{ path('1_sz_torzslap_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+<form action="{{ path('1_sz_torzslap_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }} class="form-horizontal">
     {{ form_widget(edit_form) }}
-    <p>
-        <button type="submit">Edit</button>
-    </p>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Mentés</button>
+        <a href="{{ path('1_sz_torzslap') }}" class="btn">
+            Vissza a listához
+        </a>
+    </div>
 </form>
 
-<ul class="record_actions">
-    <li>
-        <a href="{{ path('1_sz_torzslap') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <form action="{{ path('1_sz_torzslap_delete', { 'id': entity.id }) }}" method="post">
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
-    </li>
-</ul>
+<form action="{{ path('1_sz_torzslap_delete', { 'id': entity.id }) }}" method="post">
+    {{ form_widget(delete_form) }}
+    <button type="submit" class="btn btn-danger">Törzslap törlése</button>
+</form>
+
 {% endblock %}
