@@ -949,4 +949,29 @@ class Torzslap2
     {
         return $this->megjegyzesek;
     }
+
+    /**
+     * Get Forráshely
+     *
+     * @return string
+     */
+    public function getForrashely()
+    {
+        $str = "";
+        if ($this->getForrashelyFelek() != "") $str .= $this->getForrashelyFelek()." felek. ";
+        if ($this->getForrashelyAkvNeme() != "") $str .= $this->getForrashelyAkvNeme()." akv. neme ";
+        if ($this->getForrashelyPd() != "") $str .= $this->getForrashelyPd()." pd.";
+
+        return trim($str);
+    }
+
+    /**
+     * Get Jelzet
+     *
+     * @return string
+     */
+    public function getJelzet()
+    {
+        return $this->getJelzetEv().":".$this->getJelzetFolyoszam();
+    }
 }
