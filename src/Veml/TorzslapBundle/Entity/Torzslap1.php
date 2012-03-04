@@ -204,11 +204,11 @@ class Torzslap1
     private $foglalkozasa_szab;
 
     /**
-     * @var text $allamp_fogl_viszony_irva
+     * @var text $allap_fogl_viszony_irva
      *
-     * @ORM\Column(name="allamp_fogl_viszony_irva", type="text", nullable=true)
+     * @ORM\Column(name="allap_fogl_viszony_irva", type="text", nullable=true)
      */
-    private $allamp_fogl_viszony_irva;
+    private $allap_fogl_viszony_irva;
 
     /**
      * @var boolean $cs_all_notlen_hajadon
@@ -826,23 +826,23 @@ class Torzslap1
     }
 
     /**
-     * Set allamp_fogl_viszony_irva
+     * Set allap_fogl_viszony_irva
      *
-     * @param text $allampFoglViszonyIrva
+     * @param text $allapFoglViszonyIrva
      */
-    public function setAllampFoglViszonyIrva($allampFoglViszonyIrva)
+    public function setAllapFoglViszonyIrva($allapFoglViszonyIrva)
     {
-        $this->allamp_fogl_viszony_irva = $allampFoglViszonyIrva;
+        $this->allap_fogl_viszony_irva = $allapFoglViszonyIrva;
     }
 
     /**
-     * Get allamp_fogl_viszony_irva
+     * Get allap_fogl_viszony_irva
      *
      * @return text 
      */
-    public function getAllampFoglViszonyIrva()
+    public function getAllapFoglViszonyIrva()
     {
-        return $this->allamp_fogl_viszony_irva;
+        return $this->allap_fogl_viszony_irva;
     }
 
     /**
