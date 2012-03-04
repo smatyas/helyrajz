@@ -14,6 +14,10 @@ _torzslap3:
     pattern: /torzslap3
     defaults: { _controller: VemlTorzslapBundle:Torzslap3:index }
 
+_torzslap4:
+    pattern: /torzslap4
+    defaults: { _controller: VemlTorzslapBundle:Torzslap4:index }
+
 VemlTorzslapBundle:
     resource: "@VemlTorzslapBundle/Controller/"
     type:     annotation
