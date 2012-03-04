@@ -3,10 +3,53 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>{% block title %}Pápai várostörténeti helyrajzi feltárás{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="Somfai Mátyás"/>
+
+        {% block stylesheets %}
+            <link href="{{ asset('bundles/vemlhello/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet" />
+            <style>
+                body {
+                    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+                }
+            </style>
+            <link href="{{ asset('bundles/vemlhello/css/bootstrap-responsive.min.css') }}" rel="stylesheet">
+
+            <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+            <!--[if lt IE 9]>
+                <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <![endif]-->
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="#">Főoldal</a></li>
+                            <li><a href="#">1. sz. törzslap</a></li>
+                            <li><a href="#">2. sz. törzslap</a></li>
+                            <li><a href="#">3. sz. törzslap</a></li>
+                            <li><a href="#">4. sz. törzslap</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
+
+        {% block javascripts %}
+            <script src="{{ asset('bundles/vemlhello/js/jquery-1.7.1.min.js') }}"></script>
+        {% endblock %}
     </body>
 </html>
