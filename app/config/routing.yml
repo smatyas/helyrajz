@@ -10,6 +10,10 @@ _torzslap2:
     pattern: /torzslap2
     defaults: { _controller: VemlTorzslapBundle:Torzslap2:index }
 
+_torzslap3:
+    pattern: /torzslap3
+    defaults: { _controller: VemlTorzslapBundle:Torzslap3:index }
+
 VemlTorzslapBundle:
     resource: "@VemlTorzslapBundle/Controller/"
     type:     annotation

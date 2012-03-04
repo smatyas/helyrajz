@@ -36,7 +36,7 @@
                             <li {% if app.request.attributes.get('_route') == '_home' %}class="active"{% endif %}><a href="{{ path('_home') }}">Főoldal</a></li>
                             <li {% if app.request.attributes.get('_route') == '_torzslap1' %}class="active"{% endif %}><a href="{{ path('_torzslap1') }}">1. sz. törzslap</a></li>
                             <li {% if app.request.attributes.get('_route') == '_torzslap2' %}class="active"{% endif %}><a href="{{ path('_torzslap2') }}">2. sz. törzslap</a></li>
-                            <li {% if app.request.attributes.get('_route') == '_torzslap3' %}class="active"{% endif %}><a href="#">3. sz. törzslap</a></li>
+                            <li {% if app.request.attributes.get('_route') == '_torzslap3' %}class="active"{% endif %}><a href="{{ path('_torzslap3') }}">3. sz. törzslap</a></li>
                             <li {% if app.request.attributes.get('_route') == '_torzslap4' %}class="active"{% endif %}><a href="#">4. sz. törzslap</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->
