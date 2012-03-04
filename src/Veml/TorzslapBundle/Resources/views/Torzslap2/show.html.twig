@@ -1,0 +1,165 @@
+<h1>Torzslap2</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Forrashely_felek</th>
+            <td>{{ entity.forrashelyfelek }}</td>
+        </tr>
+        <tr>
+            <th>Forrashely_akv_neme</th>
+            <td>{{ entity.forrashelyakvneme }}</td>
+        </tr>
+        <tr>
+            <th>Forrashely_pd</th>
+            <td>{{ entity.forrashelypd }}</td>
+        </tr>
+        <tr>
+            <th>Hiv_szekhely</th>
+            <td>{{ entity.hivszekhely }}</td>
+        </tr>
+        <tr>
+            <th>Jelzet_ev</th>
+            <td>{{ entity.jelzetev }}</td>
+        </tr>
+        <tr>
+            <th>Jelzet_folyoszam</th>
+            <td>{{ entity.jelzetfolyoszam }}</td>
+        </tr>
+        <tr>
+            <th>Halal_ideje_ev</th>
+            <td>{{ entity.halalidejeev }}</td>
+        </tr>
+        <tr>
+            <th>Halal_ideje_ho</th>
+            <td>{{ entity.halalidejeho }}</td>
+        </tr>
+        <tr>
+            <th>Halal_ideje_nap</th>
+            <td>{{ entity.halalidejenap }}</td>
+        </tr>
+        <tr>
+            <th>Szul_hely_szab</th>
+            <td>{{ entity.szulhelyszab }}</td>
+        </tr>
+        <tr>
+            <th>Szul_hely_irva</th>
+            <td>{{ entity.szulhelyirva }}</td>
+        </tr>
+        <tr>
+            <th>Lakhely_utca_szab</th>
+            <td>{{ entity.lakhelyutcaszab }}</td>
+        </tr>
+        <tr>
+            <th>Lakhely_utca_irva</th>
+            <td>{{ entity.lakhelyutcairva }}</td>
+        </tr>
+        <tr>
+            <th>Lakhely_hazszam</th>
+            <td>{{ entity.lakhelyhazszam }}</td>
+        </tr>
+        <tr>
+            <th>Megholt_neve_szab</th>
+            <td>{{ entity.megholtneveszab }}</td>
+        </tr>
+        <tr>
+            <th>Megholt_neve_irva</th>
+            <td>{{ entity.megholtneveirva }}</td>
+        </tr>
+        <tr>
+            <th>Neme_ffi</th>
+            <td>{{ entity.nemeffi }}</td>
+        </tr>
+        <tr>
+            <th>Neme_no</th>
+            <td>{{ entity.nemeno }}</td>
+        </tr>
+        <tr>
+            <th>Megholt_fogl_szab</th>
+            <td>{{ entity.megholtfoglszab }}</td>
+        </tr>
+        <tr>
+            <th>Allap_fogl_viszony_irva</th>
+            <td>{{ entity.allapfoglviszonyirva }}</td>
+        </tr>
+        <tr>
+            <th>Cs_all_notlen_hajadon</th>
+            <td>{{ entity.csallnotlenhajadon }}</td>
+        </tr>
+        <tr>
+            <th>Cs_all_hazas</th>
+            <td>{{ entity.csallhazas }}</td>
+        </tr>
+        <tr>
+            <th>Cs_all_ozvegy</th>
+            <td>{{ entity.csallozvegy }}</td>
+        </tr>
+        <tr>
+            <th>Cs_all_elvalt</th>
+            <td>{{ entity.csallelvalt }}</td>
+        </tr>
+        <tr>
+            <th>Kora_ev</th>
+            <td>{{ entity.koraev }}</td>
+        </tr>
+        <tr>
+            <th>Kora_ho</th>
+            <td>{{ entity.koraho }}</td>
+        </tr>
+        <tr>
+            <th>Kora_het</th>
+            <td>{{ entity.korahet }}</td>
+        </tr>
+        <tr>
+            <th>Kora_nap</th>
+            <td>{{ entity.koranap }}</td>
+        </tr>
+        <tr>
+            <th>Kora_ora</th>
+            <td>{{ entity.koraora }}</td>
+        </tr>
+        <tr>
+            <th>Halva_szuletett</th>
+            <td>{{ entity.halvaszuletett }}</td>
+        </tr>
+        <tr>
+            <th>Halal_oka_szab</th>
+            <td>{{ entity.halalokaszab }}</td>
+        </tr>
+        <tr>
+            <th>Halal_oka_irva</th>
+            <td>{{ entity.halalokairva }}</td>
+        </tr>
+        <tr>
+            <th>Tovabbi_egykoru_adat</th>
+            <td>{{ entity.tovabbiegykoruadat }}</td>
+        </tr>
+        <tr>
+            <th>Megjegyzesek</th>
+            <td>{{ entity.megjegyzesek }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('2_sz_torzslap') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('2_sz_torzslap_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('2_sz_torzslap_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>
