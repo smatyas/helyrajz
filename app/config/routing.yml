@@ -1,3 +1,11 @@
+_home:
+    pattern:  /
+    defaults: { _controller: VemlHelloBundle:Default:index }
+
+_torzslap1:
+    pattern: /torzslap1
+    defaults: { _controller: VemlTorzslapBundle:Torzslap1:index }
+
 VemlTorzslapBundle:
     resource: "@VemlTorzslapBundle/Controller/"
     type:     annotation
