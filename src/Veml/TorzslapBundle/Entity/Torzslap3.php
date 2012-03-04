@@ -868,4 +868,28 @@ class Torzslap3
     {
         return $this->megjegyzesek;
     }
+
+    /**
+     * Get Forráshely
+     *
+     * @return string
+     */
+    public function getForrashely()
+    {
+        $str = "";
+        if ($this->getForrashelyKot() != "") $str .= $this->getForrashelyKot()." köt.; ";
+        if ($this->getForrashelyOp() != "") $str .= $this->getForrashelyOp()." op. ";
+
+        return trim($str);
+    }
+
+    /**
+     * Get Jelzet
+     *
+     * @return string
+     */
+    public function getJelzet()
+    {
+        return $this->getJelzetTanev().":".$this->getJelzetFsz();
+    }
 }
