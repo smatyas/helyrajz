@@ -24,175 +24,175 @@ class Torzslap4
     /**
      * @var string $forrashely_kot
      *
-     * @ORM\Column(name="forrashely_kot", type="string", length=255)
+     * @ORM\Column(name="forrashely_kot", type="string", length=255, nullable=true)
      */
     private $forrashely_kot;
 
     /**
      * @var string $forrashely_old
      *
-     * @ORM\Column(name="forrashely_old", type="string", length=255)
+     * @ORM\Column(name="forrashely_old", type="string", length=255, nullable=true)
      */
     private $forrashely_old;
 
     /**
      * @var string $jelzet_osztaly
      *
-     * @ORM\Column(name="jelzet_osztaly", type="string", length=255)
+     * @ORM\Column(name="jelzet_osztaly", type="string", length=255, nullable=true)
      */
     private $jelzet_osztaly;
 
     /**
      * @var string $jelzet_ssz
      *
-     * @ORM\Column(name="jelzet_ssz", type="string", length=255)
+     * @ORM\Column(name="jelzet_ssz", type="string", length=255, nullable=true)
      */
     private $jelzet_ssz;
 
     /**
      * @var string $jelzet_ev
      *
-     * @ORM\Column(name="jelzet_ev", type="string", length=255)
+     * @ORM\Column(name="jelzet_ev", type="string", length=255, nullable=true)
      */
     private $jelzet_ev;
 
     /**
      * @var string $vallalkozo_neve_szab
      *
-     * @ORM\Column(name="vallalkozo_neve_szab", type="string", length=255)
+     * @ORM\Column(name="vallalkozo_neve_szab", type="string", length=255, nullable=true)
      */
     private $vallalkozo_neve_szab;
 
     /**
      * @var string $vallalkozo_neve_irva
      *
-     * @ORM\Column(name="vallalkozo_neve_irva", type="string", length=255)
+     * @ORM\Column(name="vallalkozo_neve_irva", type="string", length=255, nullable=true)
      */
     private $vallalkozo_neve_irva;
 
     /**
      * @var string $vallalkozo_szem_adatai
      *
-     * @ORM\Column(name="vallalkozo_szem_adatai", type="string", length=255)
+     * @ORM\Column(name="vallalkozo_szem_adatai", type="string", length=255, nullable=true)
      */
     private $vallalkozo_szem_adatai;
 
     /**
      * @var string $uzlettars_neve_szab
      *
-     * @ORM\Column(name="uzlettars_neve_szab", type="string", length=255)
+     * @ORM\Column(name="uzlettars_neve_szab", type="string", length=255, nullable=true)
      */
     private $uzlettars_neve_szab;
 
     /**
      * @var string $uzlettars_neve_irva
      *
-     * @ORM\Column(name="uzlettars_neve_irva", type="string", length=255)
+     * @ORM\Column(name="uzlettars_neve_irva", type="string", length=255, nullable=true)
      */
     private $uzlettars_neve_irva;
 
     /**
      * @var string $uzlettars_szem_adatai
      *
-     * @ORM\Column(name="uzlettars_szem_adatai", type="string", length=255)
+     * @ORM\Column(name="uzlettars_szem_adatai", type="string", length=255, nullable=true)
      */
     private $uzlettars_szem_adatai;
 
     /**
      * @var string $foglalk_vallalk_szab
      *
-     * @ORM\Column(name="foglalk_vallalk_szab", type="string", length=255)
+     * @ORM\Column(name="foglalk_vallalk_szab", type="string", length=255, nullable=true)
      */
     private $foglalk_vallalk_szab;
 
     /**
      * @var string $foglalk_vallalk_irva
      *
-     * @ORM\Column(name="foglalk_vallalk_irva", type="string", length=255)
+     * @ORM\Column(name="foglalk_vallalk_irva", type="string", length=255, nullable=true)
      */
     private $foglalk_vallalk_irva;
 
     /**
      * @var string $foglalk_vallalk_neve
      *
-     * @ORM\Column(name="foglalk_vallalk_neve", type="string", length=255)
+     * @ORM\Column(name="foglalk_vallalk_neve", type="string", length=255, nullable=true)
      */
     private $foglalk_vallalk_neve;
 
     /**
      * @var string $telep_cimhelye_szab
      *
-     * @ORM\Column(name="telep_cimhelye_szab", type="string", length=255)
+     * @ORM\Column(name="telep_cimhelye_szab", type="string", length=255, nullable=true)
      */
     private $telep_cimhelye_szab;
 
     /**
      * @var string $telep_cimhelye_irva
      *
-     * @ORM\Column(name="telep_cimhelye_irva", type="string", length=255)
+     * @ORM\Column(name="telep_cimhelye_irva", type="string", length=255, nullable=true)
      */
     private $telep_cimhelye_irva;
 
     /**
      * @var string $ip_ig_szama
      *
-     * @ORM\Column(name="ip_ig_szama", type="string", length=255)
+     * @ORM\Column(name="ip_ig_szama", type="string", length=255, nullable=true)
      */
     private $ip_ig_szama;
 
     /**
      * @var string $ip_ig_kelte
      *
-     * @ORM\Column(name="ip_ig_kelte", type="string", length=255)
+     * @ORM\Column(name="ip_ig_kelte", type="string", length=255, nullable=true)
      */
     private $ip_ig_kelte;
 
     /**
      * @var string $hivatk_eng_sz
      *
-     * @ORM\Column(name="hivatk_eng_sz", type="string", length=255)
+     * @ORM\Column(name="hivatk_eng_sz", type="string", length=255, nullable=true)
      */
     private $hivatk_eng_sz;
 
     /**
      * @var string $telepengedely
      *
-     * @ORM\Column(name="telepengedely", type="string", length=255)
+     * @ORM\Column(name="telepengedely", type="string", length=255, nullable=true)
      */
     private $telepengedely;
 
     /**
      * @var text $uzletvez_elarusito
      *
-     * @ORM\Column(name="uzletvez_elarusito", type="text")
+     * @ORM\Column(name="uzletvez_elarusito", type="text", nullable=true)
      */
     private $uzletvez_elarusito;
 
     /**
      * @var text $modositas_valtozas_beszuntetes
      *
-     * @ORM\Column(name="modositas_valtozas_beszuntetes", type="text")
+     * @ORM\Column(name="modositas_valtozas_beszuntetes", type="text", nullable=true)
      */
     private $modositas_valtozas_beszuntetes;
 
     /**
      * @var string $mod_hivatkozasa
      *
-     * @ORM\Column(name="mod_hivatkozasa", type="string", length=255)
+     * @ORM\Column(name="mod_hivatkozasa", type="string", length=255, nullable=true)
      */
     private $mod_hivatkozasa;
 
     /**
      * @var text $tovabbi_egykoru_adat
      *
-     * @ORM\Column(name="tovabbi_egykoru_adat", type="text")
+     * @ORM\Column(name="tovabbi_egykoru_adat", type="text", nullable=true)
      */
     private $tovabbi_egykoru_adat;
 
     /**
      * @var text $megjegyzesek
      *
-     * @ORM\Column(name="megjegyzesek", type="text")
+     * @ORM\Column(name="megjegyzesek", type="text", nullable=true)
      */
     private $megjegyzesek;
 
