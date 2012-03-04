@@ -1,0 +1,153 @@
+<h1>Torzslap3</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Forrashely_kot</th>
+            <td>{{ entity.forrashelykot }}</td>
+        </tr>
+        <tr>
+            <th>Forrashely_op</th>
+            <td>{{ entity.forrashelyop }}</td>
+        </tr>
+        <tr>
+            <th>Jelzet_tanev</th>
+            <td>{{ entity.jelzettanev }}</td>
+        </tr>
+        <tr>
+            <th>Jelzet_fsz</th>
+            <td>{{ entity.jelzetfsz }}</td>
+        </tr>
+        <tr>
+            <th>Novendek_neve_szab</th>
+            <td>{{ entity.novendekneveszab }}</td>
+        </tr>
+        <tr>
+            <th>Novendek_neve_irva</th>
+            <td>{{ entity.novendekneveirva }}</td>
+        </tr>
+        <tr>
+            <th>Novendek_szul_helye_szab</th>
+            <td>{{ entity.novendekszulhelyeszab }}</td>
+        </tr>
+        <tr>
+            <th>Novendek_szul_helye_irva</th>
+            <td>{{ entity.novendekszulhelyeirva }}</td>
+        </tr>
+        <tr>
+            <th>Novendek_szul_ideje_ev</th>
+            <td>{{ entity.novendekszulidejeev }}</td>
+        </tr>
+        <tr>
+            <th>Novendek_szul_ideje_ho</th>
+            <td>{{ entity.novendekszulidejeho }}</td>
+        </tr>
+        <tr>
+            <th>Novendek_szul_ideje_nap</th>
+            <td>{{ entity.novendekszulidejenap }}</td>
+        </tr>
+        <tr>
+            <th>Gondviselo_neve_szab</th>
+            <td>{{ entity.gondviseloneveszab }}</td>
+        </tr>
+        <tr>
+            <th>Gondviselo_fogl_szab</th>
+            <td>{{ entity.gondviselofoglszab }}</td>
+        </tr>
+        <tr>
+            <th>Gondviselo_allap_fogl_viszony_irva</th>
+            <td>{{ entity.gondviseloallapfoglviszonyirva }}</td>
+        </tr>
+        <tr>
+            <th>Lakhely_lakcim_utca_szab</th>
+            <td>{{ entity.lakhelylakcimutcaszab }}</td>
+        </tr>
+        <tr>
+            <th>Lakhely_lakcim_utca_irva</th>
+            <td>{{ entity.lakhelylakcimutcairva }}</td>
+        </tr>
+        <tr>
+            <th>Hazszam</th>
+            <td>{{ entity.hazszam }}</td>
+        </tr>
+        <tr>
+            <th>Anyanyelve</th>
+            <td>{{ entity.anyanyelve }}</td>
+        </tr>
+        <tr>
+            <th>Vallasa_rk</th>
+            <td>{{ entity.vallasark }}</td>
+        </tr>
+        <tr>
+            <th>Vallasa_ref</th>
+            <td>{{ entity.vallasaref }}</td>
+        </tr>
+        <tr>
+            <th>Vallasa_ev</th>
+            <td>{{ entity.vallasaev }}</td>
+        </tr>
+        <tr>
+            <th>Vallasa_izr</th>
+            <td>{{ entity.vallasaizr }}</td>
+        </tr>
+        <tr>
+            <th>Vallasa_ao</th>
+            <td>{{ entity.vallasaao }}</td>
+        </tr>
+        <tr>
+            <th>Vallasa_c</th>
+            <td>{{ entity.vallasac }}</td>
+        </tr>
+        <tr>
+            <th>Osztalya_1</th>
+            <td>{{ entity.osztalya1 }}</td>
+        </tr>
+        <tr>
+            <th>Osztalya_2</th>
+            <td>{{ entity.osztalya2 }}</td>
+        </tr>
+        <tr>
+            <th>Osztalya_3</th>
+            <td>{{ entity.osztalya3 }}</td>
+        </tr>
+        <tr>
+            <th>Osztalya_4</th>
+            <td>{{ entity.osztalya4 }}</td>
+        </tr>
+        <tr>
+            <th>Elotte</th>
+            <td>{{ entity.elotte }}</td>
+        </tr>
+        <tr>
+            <th>Tovabbi_egykoru_adat</th>
+            <td>{{ entity.tovabbiegykoruadat }}</td>
+        </tr>
+        <tr>
+            <th>Megjegyzesek</th>
+            <td>{{ entity.megjegyzesek }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('3_sz_torzslap') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('3_sz_torzslap_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('3_sz_torzslap_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>
