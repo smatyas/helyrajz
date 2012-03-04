@@ -1,89 +1,45 @@
 {% extends 'VemlHelloBundle::base.html.twig' %}
 
 {% block body %}
-<h1>Torzslap4 list</h1>
+<a href="{{ path('4_sz_torzslap_new') }}" class="btn btn-primary" style="margin-bottom: 1em;">
+    <i class="icon-plus icon-white"></i>
+    Új elem
+</a>
 
-<table class="records_list">
+<h1>4. sz. törzslapok</h1>
+
+<table class="table table-bordered records_list">
     <thead>
         <tr>
             <th>Id</th>
-            <th>Forrashely_kot</th>
-            <th>Forrashely_old</th>
-            <th>Jelzet_osztaly</th>
-            <th>Jelzet_ssz</th>
-            <th>Jelzet_ev</th>
-            <th>Vallalkozo_neve_szab</th>
-            <th>Vallalkozo_neve_irva</th>
-            <th>Vallalkozo_szem_adatai</th>
-            <th>Uzlettars_neve_szab</th>
-            <th>Uzlettars_neve_irva</th>
-            <th>Uzlettars_szem_adatai</th>
-            <th>Foglalk_vallalk_szab</th>
-            <th>Foglalk_vallalk_irva</th>
-            <th>Foglalk_vallalk_neve</th>
-            <th>Telep_cimhelye_szab</th>
-            <th>Telep_cimhelye_irva</th>
-            <th>Ip_ig_szama</th>
-            <th>Ip_ig_kelte</th>
-            <th>Hivatk_eng_sz</th>
-            <th>Telepengedely</th>
-            <th>Uzletvez_elarusito</th>
-            <th>Modositas_valtozas_beszuntetes</th>
-            <th>Mod_hivatkozasa</th>
-            <th>Tovabbi_egykoru_adat</th>
-            <th>Megjegyzesek</th>
-            <th>Actions</th>
+            <th>Forráshely</th>
+            <th>Jelzet</th>
+            <th>Műveletek</th>
         </tr>
     </thead>
     <tbody>
     {% for entity in entities %}
         <tr>
             <td><a href="{{ path('4_sz_torzslap_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-            <td>{{ entity.forrashelykot }}</td>
-            <td>{{ entity.forrashelyold }}</td>
-            <td>{{ entity.jelzetosztaly }}</td>
-            <td>{{ entity.jelzetssz }}</td>
-            <td>{{ entity.jelzetev }}</td>
-            <td>{{ entity.vallalkozoneveszab }}</td>
-            <td>{{ entity.vallalkozoneveirva }}</td>
-            <td>{{ entity.vallalkozoszemadatai }}</td>
-            <td>{{ entity.uzlettarsneveszab }}</td>
-            <td>{{ entity.uzlettarsneveirva }}</td>
-            <td>{{ entity.uzlettarsszemadatai }}</td>
-            <td>{{ entity.foglalkvallalkszab }}</td>
-            <td>{{ entity.foglalkvallalkirva }}</td>
-            <td>{{ entity.foglalkvallalkneve }}</td>
-            <td>{{ entity.telepcimhelyeszab }}</td>
-            <td>{{ entity.telepcimhelyeirva }}</td>
-            <td>{{ entity.ipigszama }}</td>
-            <td>{{ entity.ipigkelte }}</td>
-            <td>{{ entity.hivatkengsz }}</td>
-            <td>{{ entity.telepengedely }}</td>
-            <td>{{ entity.uzletvezelarusito }}</td>
-            <td>{{ entity.modositasvaltozasbeszuntetes }}</td>
-            <td>{{ entity.modhivatkozasa }}</td>
-            <td>{{ entity.tovabbiegykoruadat }}</td>
-            <td>{{ entity.megjegyzesek }}</td>
+            <td>{{ entity.forrashely }}</td>
+            <td>{{ entity.jelzet }}</td>
             <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('4_sz_torzslap_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('4_sz_torzslap_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
+                <a href="{{ path('4_sz_torzslap_show', { 'id': entity.id }) }}" class="btn btn-info btn-mini">
+                    <i class="icon-eye-open icon-white"></i>
+                    megtekintés
+                </a>
+                <a href="{{ path('4_sz_torzslap_edit', { 'id': entity.id }) }}" class="btn btn-warning btn-mini">
+                    <i class="icon-pencil icon-white"></i>
+                    szerkesztés
+                </a>
             </td>
         </tr>
     {% endfor %}
     </tbody>
 </table>
 
-<ul>
-    <li>
-        <a href="{{ path('4_sz_torzslap_new') }}">
-            Create a new entry
-        </a>
-    </li>
-</ul>
+<a href="{{ path('4_sz_torzslap_new') }}" class="btn btn-primary" style="margin-bottom: 1em;">
+    <i class="icon-plus icon-white"></i>
+    Új elem
+</a>
 {% endblock %}

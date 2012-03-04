@@ -706,4 +706,28 @@ class Torzslap4
     {
         return $this->megjegyzesek;
     }
+
+    /**
+     * Get Forráshely
+     *
+     * @return string
+     */
+    public function getForrashely()
+    {
+        $str = "";
+        if ($this->getForrashelyKot() != "") $str .= $this->getForrashelyKot()." sor.; téka, köt.; ";
+        if ($this->getForrashelyOld() != "") $str .= $this->getForrashelyOld()." (cer.) old. ";
+
+        return trim($str);
+    }
+
+    /**
+     * Get Jelzet
+     *
+     * @return string
+     */
+    public function getJelzet()
+    {
+        return $this->getJelzetOsztaly()."-".$this->getJelzetSsz()."/".$this->getJelzetEv();
+    }
 }
