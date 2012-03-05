@@ -5,6 +5,225 @@
 <h1>Új törzslap felvétele</h1>
 
 <form action="{{ path('1_sz_torzslap_create') }}" method="post" {{ form_enctype(form) }} class="form-horizontal">
+    
+    <div class="control-group">
+        <label class="control-label">1. A törzslap jele:</label>
+        <div class="controls">
+            P-1
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">2. Forráshely (oldalig):</label>
+        <div class="controls">
+            {{ form_errors(form.sor_kot) }}
+            {{ form_errors(form.lap) }}
+            {{ form_errors(form.oldal) }}
+            {{ form_errors(form.oszlop) }}
+            {{ form_errors(form.hasab) }}
+    
+            {{ form_widget(form.sor_kot) }} sor., köt.;
+            {{ form_widget(form.lap, {'attr': {'class': 'input-mini'}}) }} lap
+            {{ form_widget(form.oldal, {'attr': {'class': 'input-mini'}}) }} old.
+            {{ form_widget(form.oszlop, {'attr': {'class': 'input-mini'}}) }} op.
+            {{ form_widget(form.hasab, {'attr': {'class': 'input-mini'}}) }} hb.
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">3. Jelzet (folyószámig):</label>
+        <div class="controls">
+            {{ form_errors(form.ev) }}
+            {{ form_errors(form.folyoszam) }}
+    
+            {{ form_widget(form.ev, {'attr': {'class': 'input-mini'}}) }}:{{ form_widget(form.folyoszam, {'attr': {'class': 'input-mini'}}) }}
+            év:fsz.
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">4. Utca, település (szabatosan):</label>
+        <div class="controls">
+            {{ form_errors(form.utca_telepules_szab) }}
+            {{ form_widget(form.utca_telepules_szab, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">5. Utca, település (írva):</label>
+        <div class="controls">
+            {{ form_errors(form.utca_telepules_irva) }}
+            {{ form_widget(form.utca_telepules_irva, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">6. Házsz., a ház neve:</label>
+        <div class="controls">
+            {{ form_errors(form.hazszam) }}
+            {{ form_errors(form.haz_neve) }}
+    
+            {{ form_widget(form.hazszam, {'attr': {'class': 'input-mini'}}) }}
+            {{ form_widget(form.haz_neve) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">7. A megholt neve (szab.):</label>
+        <div class="controls">
+            {{ form_errors(form.megholt_neve_szab) }}
+            {{ form_widget(form.megholt_neve_szab, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">8. A megholt neve (írva):</label>
+        <div class="controls">
+            {{ form_errors(form.megholt_neve_irva) }}
+            {{ form_widget(form.megholt_neve_irva, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">9. A megholt neme:</label>
+        <div class="controls">
+            {{ form_errors(form.neme_ffi) }}
+            {{ form_errors(form.neme_no) }}
+    
+            <label for="veml_torzslapbundle_torzslap1type_neme_ffi">Ffi:</label>{{ form_widget(form.neme_ffi) }}
+            <label for="veml_torzslapbundle_torzslap1type_neme_no">Nő:</label>{{ form_widget(form.neme_no) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">10. Vallása:</label>
+        <div class="controls">
+            {{ form_errors(form.vallasa_rk) }}
+            {{ form_errors(form.vallasa_ref) }}
+            {{ form_errors(form.vallasa_ev) }}
+            {{ form_errors(form.vallasa_izr) }}
+
+            <label for="veml_torzslapbundle_torzslap1type_vallasa_rk">Rk:</label>{{ form_widget(form.vallasa_rk) }}
+            <label for="veml_torzslapbundle_torzslap1type_vallasa_ref">Ref:</label>{{ form_widget(form.vallasa_ref) }}
+            <label for="veml_torzslapbundle_torzslap1type_vallasa_ev">Ev:</label>{{ form_widget(form.vallasa_ev) }}
+            <label for="veml_torzslapbundle_torzslap1type_vallasa_izr">Izr:</label>{{ form_widget(form.vallasa_izr) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">11. Kora:</label>
+        <div class="controls">
+            {{ form_errors(form.kora_ev) }}
+            {{ form_errors(form.kora_ho) }}
+            {{ form_errors(form.kora_het) }}
+            {{ form_errors(form.kora_nap) }}
+            {{ form_errors(form.kora_ora) }}
+    
+    
+            {{ form_widget(form.kora_ev, {'attr': {'class': 'input-mini'}}) }} év
+            {{ form_widget(form.kora_ho, {'attr': {'class': 'input-mini'}}) }} hó
+            {{ form_widget(form.kora_het, {'attr': {'class': 'input-mini'}}) }} hét
+            {{ form_widget(form.kora_nap, {'attr': {'class': 'input-mini'}}) }} nap
+            {{ form_widget(form.kora_ora, {'attr': {'class': 'input-mini'}}) }} óra
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">12.</label>
+        <div class="controls">
+            {{ form_errors(form.halva_szuletett) }}
+            <label for="veml_torzslapbundle_torzslap1type_halva_szuletett">Halva sz.:</label>{{ form_widget(form.halva_szuletett) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">13. A halál körülményei:</label>
+        <div class="controls">
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">14. Foglalkozása (szab.):</label>
+        <div class="controls">
+            {{ form_errors(form.foglalkozasa_szab) }}
+            {{ form_widget(form.foglalkozasa_szab, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">15. Állap., fogl., viszony (írva):</label>
+        <div class="controls">
+            {{ form_errors(form.allap_fogl_viszony_irva) }}
+            {{ form_widget(form.allap_fogl_viszony_irva, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">16. Családi áll. (szab.):</label>
+        <div class="controls">
+            {{ form_errors(form.cs_all_notlen_hajadon) }}
+            {{ form_errors(form.cs_all_hazas) }}
+            {{ form_errors(form.cs_all_ozvegy) }}
+            {{ form_errors(form.cs_all_elvalt) }}
+
+            <label for="veml_torzslapbundle_torzslap1type_cs_all_notlen_hajadon">Nőtlen/hajadon:</label>{{ form_widget(form.cs_all_notlen_hajadon) }}
+            <label for="veml_torzslapbundle_torzslap1type_cs_all_hazas">Házas:</label>{{ form_widget(form.cs_all_hazas) }}
+            <label for="veml_torzslapbundle_torzslap1type_cs_all_ozvegy">Özv.:</label>{{ form_widget(form.cs_all_ozvegy) }}
+            <label for="veml_torzslapbundle_torzslap1type_cs_all_elvalt">Elv.:</label>{{ form_widget(form.cs_all_elvalt) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">17. Maradt kk. és vagyon:</label>
+        <div class="controls">
+            {{ form_errors(form.maradt_kk_es_vagyon) }}
+            {{ form_widget(form.maradt_kk_es_vagyon, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">18. A halál ideje:</label>
+        <div class="controls">
+            {{ form_errors(form.halal_ideje_ev) }}
+            {{ form_errors(form.halal_ideje_ho) }}
+            {{ form_errors(form.halal_ideje_nap) }}
+    
+            {{ form_widget(form.halal_ideje_ev, {'attr': {'class': 'input-mini', 'size': 4}}) }}.{{ form_widget(form.halal_ideje_ho, {'attr': {'class': 'input-mini', 'size': 2}}) }}.{{ form_widget(form.halal_ideje_nap, {'attr': {'class': 'input-mini', 'size': 2}}) }} év, hó, nap
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">19. A halál oka (szab.):</label>
+        <div class="controls">
+            {{ form_errors(form.halal_oka_szab) }}
+            {{ form_widget(form.halal_oka_szab, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">20. A halál oka (írva):</label>
+        <div class="controls">
+            {{ form_errors(form.halal_oka_irva) }}
+            {{ form_widget(form.halal_oka_irva, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">21. További egykorú adat:</label>
+        <div class="controls">
+            {{ form_errors(form.tovabbi_egykoru_adat) }}
+            {{ form_widget(form.tovabbi_egykoru_adat, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+    
+    <div class="control-group">
+        <label class="control-label">22. Megjegyzések:</label>
+        <div class="controls">
+            {{ form_errors(form.megjegyzesek) }}
+            {{ form_widget(form.megjegyzesek, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+
     {{ form_widget(form) }}
 
     <div class="form-actions">
