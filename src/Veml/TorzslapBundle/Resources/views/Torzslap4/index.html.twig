@@ -11,7 +11,7 @@
 <table class="table table-bordered records_list">
     <thead>
         <tr>
-            <th>Id</th>
+            <th>ID</th>
             <th>Forráshely</th>
             <th>Jelzet</th>
             <th>Műveletek</th>
@@ -20,7 +20,7 @@
     <tbody>
     {% for entity in entities %}
         <tr>
-            <td><a href="{{ path('4_sz_torzslap_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.id }}</td>
             <td>{{ entity.forrashely }}</td>
             <td>{{ entity.jelzet }}</td>
             <td>
