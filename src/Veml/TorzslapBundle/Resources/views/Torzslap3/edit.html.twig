@@ -1,26 +1,207 @@
 {% extends 'VemlHelloBundle::base.html.twig' %}
 
 {% block body %}
-<h1>Torzslap3 edit</h1>
+<h1>Törzslap szerkesztése</h1>
 
-<form action="{{ path('3_sz_torzslap_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+<form action="{{ path('3_sz_torzslap_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }} class="form-horizontal">
+
+    <div class="control-group">
+        <label class="control-label">1. A törzslap jele:</label>
+        <div class="controls">
+            P-3
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">2. Forráshely (oldalig):</label>
+        <div class="controls">
+            {{ form_errors(edit_form.forrashely_kot) }}
+            {{ form_errors(edit_form.forrashely_op) }}
+
+            {{ form_widget(edit_form.forrashely_kot, {'attr': {'class': 'input-mini'}}) }} köt.;
+            {{ form_widget(edit_form.forrashely_op, {'attr': {'class': 'input-mini'}}) }} op.
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">3. Jelzet (folyószámig):</label>
+        <div class="controls">
+            {{ form_errors(edit_form.jelzet_tanev) }}
+            {{ form_errors(edit_form.jelzet_fsz) }}
+
+            {{ form_widget(edit_form.jelzet_tanev, {'attr': {'class': 'input-mini'}}) }}:{{ form_widget(edit_form.jelzet_fsz, {'attr': {'class': 'input-mini'}}) }}
+            tanév; fsz.
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">4. A növendék neve (szab.):</label>
+        <div class="controls">
+            {{ form_errors(edit_form.novendek_neve_szab) }}
+            {{ form_widget(edit_form.novendek_neve_szab, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">5. A növendék neve (írva):</label>
+        <div class="controls">
+            {{ form_errors(edit_form.novendek_neve_irva) }}
+            {{ form_widget(edit_form.novendek_neve_irva, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">6. A növendék szül. helye (szab.):</label>
+        <div class="controls">
+            {{ form_errors(edit_form.novendek_szul_helye_szab) }}
+            {{ form_widget(edit_form.novendek_szul_helye_szab, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">7. A növendék szül. helye (írva):</label>
+        <div class="controls">
+            {{ form_errors(edit_form.novendek_szul_helye_irva) }}
+            {{ form_widget(edit_form.novendek_szul_helye_irva, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">8. A növendék szül. ideje:</label>
+        <div class="controls">
+            {{ form_errors(edit_form.novendek_szul_ideje_ev) }}
+            {{ form_errors(edit_form.novendek_szul_ideje_ho) }}
+            {{ form_errors(edit_form.novendek_szul_ideje_nap) }}
+
+            {{ form_widget(edit_form.novendek_szul_ideje_ev, {'attr': {'class': 'input-mini', 'size': 4}}) }}.{{ form_widget(edit_form.novendek_szul_ideje_ho, {'attr': {'class': 'input-mini', 'size': 2}}) }}.{{ form_widget(edit_form.novendek_szul_ideje_nap, {'attr': {'class': 'input-mini', 'size': 2}}) }} év, hó, nap
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">9. A gondviselő neve (szab.):</label>
+        <div class="controls">
+            {{ form_errors(edit_form.gondviselo_neve_szab) }}
+            {{ form_widget(edit_form.gondviselo_neve_szab, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">10. A gondviselő fogl. (szab.):</label>
+        <div class="controls">
+            {{ form_errors(edit_form.gondviselo_fogl_szab) }}
+            {{ form_widget(edit_form.gondviselo_fogl_szab, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">11. A gondviselő állap., fogl., viszony (írva):</label>
+        <div class="controls">
+            {{ form_errors(edit_form.gondviselo_allap_fogl_viszony_irva) }}
+            {{ form_widget(edit_form.gondviselo_allap_fogl_viszony_irva, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">12. Lakhely, lakcím utca (szab.):</label>
+        <div class="controls">
+            {{ form_errors(edit_form.lakhely_lakcim_utca_szab) }}
+            {{ form_widget(edit_form.lakhely_lakcim_utca_szab, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">13. Lakhely, lakcím utca (írva):</label>
+        <div class="controls">
+            {{ form_errors(edit_form.lakhely_lakcim_utca_irva) }}
+            {{ form_widget(edit_form.lakhely_lakcim_utca_irva, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">14. Lakhely házszám:</label>
+        <div class="controls">
+            {{ form_errors(edit_form.hazszam) }}
+            {{ form_widget(edit_form.hazszam, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">15. Anyanyelve:</label>
+        <div class="controls">
+            {{ form_errors(edit_form.anyanyelve) }}
+            {{ form_widget(edit_form.anyanyelve, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">16. Vallása:</label>
+        <div class="controls">
+            {{ form_errors(edit_form.vallasa_rk) }}
+            {{ form_errors(edit_form.vallasa_ref) }}
+            {{ form_errors(edit_form.vallasa_ev) }}
+            {{ form_errors(edit_form.vallasa_izr) }}
+            {{ form_errors(edit_form.vallasa_ao) }}
+            {{ form_errors(edit_form.vallasa_c) }}
+
+            <label for="veml_torzslapbundle_torzslap3type_vallasa_rk">Rk:</label>{{ form_widget(edit_form.vallasa_rk) }}
+            <label for="veml_torzslapbundle_torzslap3type_vallasa_ref">Ref:</label>{{ form_widget(edit_form.vallasa_ref) }}
+            <label for="veml_torzslapbundle_torzslap3type_vallasa_ev">Ev:</label>{{ form_widget(edit_form.vallasa_ev) }}
+            <label for="veml_torzslapbundle_torzslap3type_vallasa_izr">Izr:</label>{{ form_widget(edit_form.vallasa_izr) }}
+            <label for="veml_torzslapbundle_torzslap3type_vallasa_ao">AO:</label>{{ form_widget(edit_form.vallasa_ao) }}
+            <label for="veml_torzslapbundle_torzslap3type_vallasa_c">C:</label>{{ form_widget(edit_form.vallasa_c) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">17. Osztálya:</label>
+        <div class="controls">
+            {{ form_errors(edit_form.osztalya_1) }}
+            {{ form_errors(edit_form.osztalya_2) }}
+            {{ form_errors(edit_form.osztalya_3) }}
+            {{ form_errors(edit_form.osztalya_4) }}
+
+            <label for="veml_torzslapbundle_torzslap3type_osztalya_1">I.</label>{{ form_widget(edit_form.osztalya_1) }}
+            <label for="veml_torzslapbundle_torzslap3type_osztalya_2">II.</label>{{ form_widget(edit_form.osztalya_2) }}
+            <label for="veml_torzslapbundle_torzslap3type_osztalya_3">III.</label>{{ form_widget(edit_form.osztalya_3) }}
+            <label for="veml_torzslapbundle_torzslap3type_osztalya_4">IV.</label>{{ form_widget(edit_form.osztalya_4) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">18. Előtte:</label>
+        <div class="controls">
+            {{ form_errors(edit_form.elotte) }}
+            {{ form_widget(edit_form.elotte, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">19. További egykorú adat:</label>
+        <div class="controls">
+            {{ form_errors(edit_form.tovabbi_egykoru_adat) }}
+            {{ form_widget(edit_form.tovabbi_egykoru_adat, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">20. Megjegyzések:</label>
+        <div class="controls">
+            {{ form_errors(edit_form.megjegyzesek) }}
+            {{ form_widget(edit_form.megjegyzesek, {'attr': {'class': 'span4'}}) }}
+        </div>
+    </div>
+
     {{ form_widget(edit_form) }}
-    <p>
-        <button type="submit">Edit</button>
-    </p>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Mentés</button>
+        <a href="{{ path('3_sz_torzslap') }}" class="btn">
+            Vissza a listához
+        </a>
+    </div>
 </form>
 
-<ul class="record_actions">
-    <li>
-        <a href="{{ path('3_sz_torzslap') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <form action="{{ path('3_sz_torzslap_delete', { 'id': entity.id }) }}" method="post">
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
-    </li>
-</ul>
+<form action="{{ path('3_sz_torzslap_delete', { 'id': entity.id }) }}" method="post">
+    {{ form_widget(delete_form) }}
+    <button type="submit" class="btn btn-danger">Törzslap törlése</button>
+</form>
 {% endblock %}
