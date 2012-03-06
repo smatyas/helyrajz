@@ -197,6 +197,13 @@ class Torzslap1
     private $halva_szuletett;
 
     /**
+     * @var string $halal_korulmenyei
+     *
+     * @ORM\Column(name="halal_korulmenyei", type="string", length=255, nullable=true)
+     */
+    private $halal_korulmenyei;
+
+    /**
      * @var string $foglalkozasa_szab
      *
      * @ORM\Column(name="foglalkozasa_szab", type="string", length=255, nullable=true)
@@ -1110,5 +1117,25 @@ class Torzslap1
         if ($this->getHasab() != "") $str .= $this->getHasab()." hb.";
 
         return trim($str);
+    }
+
+    /**
+     * Set halal_korulmenyei
+     *
+     * @param string $halalKorulmenyei
+     */
+    public function setHalalKorulmenyei($halalKorulmenyei)
+    {
+        $this->halal_korulmenyei = $halalKorulmenyei;
+    }
+
+    /**
+     * Get halal_korulmenyei
+     *
+     * @return string 
+     */
+    public function getHalalKorulmenyei()
+    {
+        return $this->halal_korulmenyei;
     }
 }
