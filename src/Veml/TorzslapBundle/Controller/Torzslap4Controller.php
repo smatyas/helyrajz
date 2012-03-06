@@ -90,7 +90,7 @@ class Torzslap4Controller extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('4_sz_torzslap_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('4_sz_torzslap'));
             
         }
 
