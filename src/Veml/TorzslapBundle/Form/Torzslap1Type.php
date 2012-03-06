@@ -35,6 +35,7 @@ class Torzslap1Type extends AbstractType
             ->add('kora_nap')
             ->add('kora_ora')
             ->add('halva_szuletett')
+            ->add('halal_korulmenyei')
             ->add('foglalkozasa_szab')
             ->add('allap_fogl_viszony_irva')
             ->add('cs_all_notlen_hajadon')
