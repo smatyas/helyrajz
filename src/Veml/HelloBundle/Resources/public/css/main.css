@@ -10,3 +10,11 @@
 .controls label {
     display: inline-block !important;
 }
+
+.bizonytalan {
+    border: 1px solid #f8b9b7;
+    background-color: #eed3d7;
+    padding: .25em;
+    margin: 0;
+    vertical-align: middle;
+}

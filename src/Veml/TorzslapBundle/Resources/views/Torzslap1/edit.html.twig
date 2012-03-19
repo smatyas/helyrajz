@@ -15,6 +15,7 @@
     <div class="control-group">
         <label class="control-label">2. Forráshely (oldalig):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_forrashely) }}</span>
             {{ form_errors(edit_form.sor_kot) }}
             {{ form_errors(edit_form.lap) }}
             {{ form_errors(edit_form.oldal) }}
@@ -32,6 +33,7 @@
     <div class="control-group">
         <label class="control-label">3. Jelzet (folyószámig):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_jelzet) }}</span>
             {{ form_errors(edit_form.ev) }}
             {{ form_errors(edit_form.folyoszam) }}
 
@@ -43,6 +45,7 @@
     <div class="control-group">
         <label class="control-label">4. Utca, település (szabatosan):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_u_t_szab) }}</span>
             {{ form_errors(edit_form.utca_telepules_szab) }}
             {{ form_widget(edit_form.utca_telepules_szab, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -51,6 +54,7 @@
     <div class="control-group">
         <label class="control-label">5. Utca, település (írva):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_u_t_irva) }}</span>
             {{ form_errors(edit_form.utca_telepules_irva) }}
             {{ form_widget(edit_form.utca_telepules_irva, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -59,6 +63,7 @@
     <div class="control-group">
         <label class="control-label">6. Házsz., a ház neve:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_hazszam) }}</span>
             {{ form_errors(edit_form.hazszam) }}
             {{ form_errors(edit_form.haz_neve) }}
 
@@ -70,6 +75,7 @@
     <div class="control-group">
         <label class="control-label">7. A megholt neve (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_megholt_neve_szab) }}</span>
             {{ form_errors(edit_form.megholt_neve_szab) }}
             {{ form_widget(edit_form.megholt_neve_szab, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -78,6 +84,7 @@
     <div class="control-group">
         <label class="control-label">8. A megholt neve (írva):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_megholt_neve_irva) }}</span>
             {{ form_errors(edit_form.megholt_neve_irva) }}
             {{ form_widget(edit_form.megholt_neve_irva, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -86,6 +93,7 @@
     <div class="control-group">
         <label class="control-label">9. A megholt neme:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_megholt_neme) }}</span>
             {{ form_errors(edit_form.neme_ffi) }}
             {{ form_errors(edit_form.neme_no) }}
 
@@ -97,6 +105,7 @@
     <div class="control-group">
         <label class="control-label">10. Vallása:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_vallasa) }}</span>
             {{ form_errors(edit_form.vallasa_rk) }}
             {{ form_errors(edit_form.vallasa_ref) }}
             {{ form_errors(edit_form.vallasa_ev) }}
@@ -112,6 +121,7 @@
     <div class="control-group">
         <label class="control-label">11. Kora:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_kora) }}</span>
             {{ form_errors(edit_form.kora_ev) }}
             {{ form_errors(edit_form.kora_ho) }}
             {{ form_errors(edit_form.kora_het) }}
@@ -130,6 +140,7 @@
     <div class="control-group">
         <label class="control-label">12.</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_halva_szuletett) }}</span>
             {{ form_errors(edit_form.halva_szuletett) }}
             <label for="veml_torzslapbundle_torzslap1type_halva_szuletett">Halva sz.:</label>{{ form_widget(edit_form.halva_szuletett) }}
         </div>
@@ -138,6 +149,7 @@
     <div class="control-group">
         <label class="control-label">13. A halál körülményei:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_halal_korulmenyei) }}</span>
             {{ form_errors(edit_form.halal_korulmenyei) }}
             {{ form_widget(edit_form.halal_korulmenyei, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -146,6 +158,7 @@
     <div class="control-group">
         <label class="control-label">14. Foglalkozása (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_fogl_szab) }}</span>
             {{ form_errors(edit_form.foglalkozasa_szab) }}
             {{ form_widget(edit_form.foglalkozasa_szab, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -154,6 +167,7 @@
     <div class="control-group">
         <label class="control-label">15. Állap., fogl., viszony (írva):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_allap_fogl_viszony_irva) }}</span>
             {{ form_errors(edit_form.allap_fogl_viszony_irva) }}
             {{ form_widget(edit_form.allap_fogl_viszony_irva, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -162,6 +176,7 @@
     <div class="control-group">
         <label class="control-label">16. Családi áll. (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_cs_all) }}</span>
             {{ form_errors(edit_form.cs_all_notlen_hajadon) }}
             {{ form_errors(edit_form.cs_all_hazas) }}
             {{ form_errors(edit_form.cs_all_ozvegy) }}
@@ -177,6 +192,7 @@
     <div class="control-group">
         <label class="control-label">17. Maradt kk. és vagyon:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_maradt_kk_es_vagyon) }}</span>
             {{ form_errors(edit_form.maradt_kk_es_vagyon) }}
             {{ form_widget(edit_form.maradt_kk_es_vagyon, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -185,6 +201,7 @@
     <div class="control-group">
         <label class="control-label">18. A halál ideje:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_halal_ideje) }}</span>
             {{ form_errors(edit_form.halal_ideje_ev) }}
             {{ form_errors(edit_form.halal_ideje_ho) }}
             {{ form_errors(edit_form.halal_ideje_nap) }}
@@ -196,6 +213,7 @@
     <div class="control-group">
         <label class="control-label">19. A halál oka (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_halal_oka_szab) }}</span>
             {{ form_errors(edit_form.halal_oka_szab) }}
             {{ form_widget(edit_form.halal_oka_szab, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -204,6 +222,7 @@
     <div class="control-group">
         <label class="control-label">20. A halál oka (írva):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_halal_oka_irva) }}</span>
             {{ form_errors(edit_form.halal_oka_irva) }}
             {{ form_widget(edit_form.halal_oka_irva, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -212,6 +231,7 @@
     <div class="control-group">
         <label class="control-label">21. További egykorú adat:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_tovabbi_egykoru_adat) }}</span>
             {{ form_errors(edit_form.tovabbi_egykoru_adat) }}
             {{ form_widget(edit_form.tovabbi_egykoru_adat, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -234,7 +254,7 @@
     </div>
 </form>
 
-<form action="{{ path('1_sz_torzslap_delete', { 'id': entity.id }) }}" method="post">
+<form action="{{ path('1_sz_torzslap_delete', { 'id': entity.id }) }}" method="post" onsubmit="if (!confirm('Biztosan törlöd?')) { return false; }">
     {{ form_widget(delete_form) }}
     <button type="submit" class="btn btn-danger">Törzslap törlése</button>
 </form>
