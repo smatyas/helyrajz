@@ -200,7 +200,7 @@
     </div>
 </form>
 
-<form action="{{ path('3_sz_torzslap_delete', { 'id': entity.id }) }}" method="post">
+<form action="{{ path('3_sz_torzslap_delete', { 'id': entity.id }) }}" method="post" onsubmit="if (!confirm('Biztosan törlöd?')) { return false; }">
     {{ form_widget(delete_form) }}
     <button type="submit" class="btn btn-danger">Törzslap törlése</button>
 </form>
