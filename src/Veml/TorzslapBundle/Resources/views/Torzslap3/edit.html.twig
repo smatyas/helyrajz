@@ -15,6 +15,7 @@
     <div class="control-group">
         <label class="control-label">2. Forráshely (oldalig):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_forrashely) }}</span>
             {{ form_errors(edit_form.forrashely_kot) }}
             {{ form_errors(edit_form.forrashely_op) }}
 
@@ -26,6 +27,7 @@
     <div class="control-group">
         <label class="control-label">3. Jelzet (folyószámig):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_jelzet) }}</span>
             {{ form_errors(edit_form.jelzet_tanev) }}
             {{ form_errors(edit_form.jelzet_fsz) }}
 
@@ -37,6 +39,7 @@
     <div class="control-group">
         <label class="control-label">4. A növendék neve (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_novendek_neve_szab) }}</span>
             {{ form_errors(edit_form.novendek_neve_szab) }}
             {{ form_widget(edit_form.novendek_neve_szab, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -45,6 +48,7 @@
     <div class="control-group">
         <label class="control-label">5. A növendék neve (írva):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_novendek_neve_irva) }}</span>
             {{ form_errors(edit_form.novendek_neve_irva) }}
             {{ form_widget(edit_form.novendek_neve_irva, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -53,6 +57,7 @@
     <div class="control-group">
         <label class="control-label">6. A növendék szül. helye (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_novendek_szul_helye_szab) }}</span>
             {{ form_errors(edit_form.novendek_szul_helye_szab) }}
             {{ form_widget(edit_form.novendek_szul_helye_szab, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -61,6 +66,7 @@
     <div class="control-group">
         <label class="control-label">7. A növendék szül. helye (írva):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_novendek_szul_helye_irva) }}</span>
             {{ form_errors(edit_form.novendek_szul_helye_irva) }}
             {{ form_widget(edit_form.novendek_szul_helye_irva, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -69,6 +75,7 @@
     <div class="control-group">
         <label class="control-label">8. A növendék szül. ideje:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_novendek_szul_ideje) }}</span>
             {{ form_errors(edit_form.novendek_szul_ideje_ev) }}
             {{ form_errors(edit_form.novendek_szul_ideje_ho) }}
             {{ form_errors(edit_form.novendek_szul_ideje_nap) }}
@@ -80,6 +87,7 @@
     <div class="control-group">
         <label class="control-label">9. A gondviselő neve (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_gondviselo_neve_szab) }}</span>
             {{ form_errors(edit_form.gondviselo_neve_szab) }}
             {{ form_widget(edit_form.gondviselo_neve_szab, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -88,6 +96,7 @@
     <div class="control-group">
         <label class="control-label">10. A gondviselő fogl. (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_gondviselo_fogl_szab) }}</span>
             {{ form_errors(edit_form.gondviselo_fogl_szab) }}
             {{ form_widget(edit_form.gondviselo_fogl_szab, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -96,6 +105,7 @@
     <div class="control-group">
         <label class="control-label">11. A gondviselő állap., fogl., viszony (írva):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_gondviselo_allap_fogl_viszony_irva) }}</span>
             {{ form_errors(edit_form.gondviselo_allap_fogl_viszony_irva) }}
             {{ form_widget(edit_form.gondviselo_allap_fogl_viszony_irva, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -104,6 +114,7 @@
     <div class="control-group">
         <label class="control-label">12. Lakhely, lakcím utca (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_lakhely_szab) }}</span>
             {{ form_errors(edit_form.lakhely_lakcim_utca_szab) }}
             {{ form_widget(edit_form.lakhely_lakcim_utca_szab, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -112,6 +123,7 @@
     <div class="control-group">
         <label class="control-label">13. Lakhely, lakcím utca (írva):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_lakhely_irva) }}</span>
             {{ form_errors(edit_form.lakhely_lakcim_utca_irva) }}
             {{ form_widget(edit_form.lakhely_lakcim_utca_irva, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -120,6 +132,7 @@
     <div class="control-group">
         <label class="control-label">14. Lakhely házszám:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_hazszam) }}</span>
             {{ form_errors(edit_form.hazszam) }}
             {{ form_widget(edit_form.hazszam, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -128,6 +141,7 @@
     <div class="control-group">
         <label class="control-label">15. Anyanyelve:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_anyanyelve) }}</span>
             {{ form_errors(edit_form.anyanyelve) }}
             {{ form_widget(edit_form.anyanyelve, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -136,6 +150,7 @@
     <div class="control-group">
         <label class="control-label">16. Vallása:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_vallasa) }}</span>
             {{ form_errors(edit_form.vallasa_rk) }}
             {{ form_errors(edit_form.vallasa_ref) }}
             {{ form_errors(edit_form.vallasa_ev) }}
@@ -155,6 +170,7 @@
     <div class="control-group">
         <label class="control-label">17. Osztálya:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_osztalya) }}</span>
             {{ form_errors(edit_form.osztalya_1) }}
             {{ form_errors(edit_form.osztalya_2) }}
             {{ form_errors(edit_form.osztalya_3) }}
@@ -170,6 +186,7 @@
     <div class="control-group">
         <label class="control-label">18. Előtte:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_elotte) }}</span>
             {{ form_errors(edit_form.elotte) }}
             {{ form_widget(edit_form.elotte, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -178,6 +195,7 @@
     <div class="control-group">
         <label class="control-label">19. További egykorú adat:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(edit_form.btlan_tovabbi_egykoru_adat) }}</span>
             {{ form_errors(edit_form.tovabbi_egykoru_adat) }}
             {{ form_widget(edit_form.tovabbi_egykoru_adat, {'attr': {'class': 'span4'}}) }}
         </div>
