@@ -1,7 +1,7 @@
 {% extends 'VemlHelloBundle::base.html.twig' %}
 
 {% block body %}
-<h1>Torzslap2 creation</h1>
+<h1>Törzslap felvétele</h1>
 
 <form action="{{ path('2_sz_torzslap_create') }}" method="post" {{ form_enctype(form) }} class="form-horizontal">
 
@@ -15,6 +15,7 @@
     <div class="control-group">
         <label class="control-label">2. Forráshely:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_forrashely) }}</span>
             {{ form_errors(form.forrashely_felek) }}
             {{ form_errors(form.forrashely_akv_neme) }}
             {{ form_errors(form.forrashely_pd) }}
@@ -28,6 +29,7 @@
     <div class="control-group">
         <label class="control-label">3. Hiv. székhely:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_hiv_szekhely) }}</span>
             {{ form_errors(form.hiv_szekhely) }}
             {{ form_widget(form.hiv_szekhely, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -36,6 +38,7 @@
     <div class="control-group">
         <label class="control-label">4. Jelzet:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_jelzet) }}</span>
             {{ form_errors(form.jelzet_ev) }}
             {{ form_errors(form.jelzet_folyoszam) }}
     
@@ -47,6 +50,7 @@
     <div class="control-group">
         <label class="control-label">5. A halál ideje:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_halal_ideje) }}</span>
             {{ form_errors(form.halal_ideje_ev) }}
             {{ form_errors(form.halal_ideje_ho) }}
             {{ form_errors(form.halal_ideje_nap) }}
@@ -58,6 +62,7 @@
     <div class="control-group">
         <label class="control-label">6. Szül. (szárm.) hely (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_szul_hely_szab) }}</span>
             {{ form_errors(form.szul_hely_szab) }}
             {{ form_widget(form.szul_hely_szab, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -66,6 +71,7 @@
     <div class="control-group">
         <label class="control-label">7. Szül. (szárm.) hely (írva):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_szul_hely_irva) }}</span>
             {{ form_errors(form.szul_hely_irva) }}
             {{ form_widget(form.szul_hely_irva, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -74,6 +80,7 @@
     <div class="control-group">
         <label class="control-label">8. Lakhely (hal. hely): u. (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_lakhely_szab) }}</span>
             {{ form_errors(form.lakhely_utca_szab) }}
             {{ form_widget(form.lakhely_utca_szab, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -82,6 +89,7 @@
     <div class="control-group">
         <label class="control-label">9. Lakhely (hal. hely): u. (írva):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_lakhely_irva) }}</span>
             {{ form_errors(form.lakhely_utca_irva) }}
             {{ form_widget(form.lakhely_utca_irva, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -90,6 +98,7 @@
     <div class="control-group">
         <label class="control-label">10. Lakhely házszám:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_lakhely_hazszam) }}</span>
             {{ form_errors(form.lakhely_hazszam) }}
             {{ form_widget(form.lakhely_hazszam, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -98,6 +107,7 @@
     <div class="control-group">
         <label class="control-label">11. A megholt neve (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_megholt_neve_szab) }}</span>
             {{ form_errors(form.megholt_neve_szab) }}
             {{ form_widget(form.megholt_neve_szab, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -106,6 +116,7 @@
     <div class="control-group">
         <label class="control-label">12. A megholt neve (írva):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_megholt_neve_irva) }}</span>
             {{ form_errors(form.megholt_neve_irva) }}
             {{ form_widget(form.megholt_neve_irva, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -114,6 +125,7 @@
     <div class="control-group">
         <label class="control-label">13. A megholt neme:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_megholt_neme) }}</span>
             {{ form_errors(form.neme_ffi) }}
             {{ form_errors(form.neme_no) }}
     
@@ -125,6 +137,7 @@
     <div class="control-group">
         <label class="control-label">14. A megholt fogl. (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_megholt_fogl_szab) }}</span>
             {{ form_errors(form.megholt_fogl_szab) }}
             {{ form_widget(form.megholt_fogl_szab, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -133,6 +146,7 @@
     <div class="control-group">
         <label class="control-label">15. Állap., fogl. viszony (írva):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_allap_fogl_viszony_irva) }}</span>
             {{ form_errors(form.allap_fogl_viszony_irva) }}
             {{ form_widget(form.allap_fogl_viszony_irva, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -141,6 +155,7 @@
     <div class="control-group">
         <label class="control-label">16. A megholt csal. áll. (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_cs_all) }}</span>
             {{ form_errors(form.cs_all_notlen_hajadon) }}
             {{ form_errors(form.cs_all_hazas) }}
             {{ form_errors(form.cs_all_ozvegy) }}
@@ -156,6 +171,7 @@
     <div class="control-group">
         <label class="control-label">17. A megholt kora:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_kora) }}</span>
             {{ form_errors(form.kora_ev) }}
             {{ form_errors(form.kora_ho) }}
             {{ form_errors(form.kora_het) }}
@@ -174,6 +190,7 @@
     <div class="control-group">
         <label class="control-label">18.</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_halva_szuletett) }}</span>
             {{ form_errors(form.halva_szuletett) }}
             <label for="veml_torzslapbundle_torzslap2type_halva_szuletett">Halva sz.:</label>{{ form_widget(form.halva_szuletett) }}
         </div>
@@ -182,6 +199,7 @@
     <div class="control-group">
         <label class="control-label">19. A halál oka (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_halal_oka_szab) }}</span>
             {{ form_errors(form.halal_oka_szab) }}
             {{ form_widget(form.halal_oka_szab, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -190,6 +208,7 @@
     <div class="control-group">
         <label class="control-label">20. A halál oka (irva):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_halal_oka_irva) }}</span>
             {{ form_errors(form.halal_oka_irva) }}
             {{ form_widget(form.halal_oka_irva, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -198,6 +217,7 @@
     <div class="control-group">
         <label class="control-label">21. További egykorú adat:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_tovabbi_egykoru_adat) }}</span>
             {{ form_errors(form.tovabbi_egykoru_adat) }}
             {{ form_widget(form.tovabbi_egykoru_adat, {'attr': {'class': 'span4'}}) }}
         </div>
