@@ -196,6 +196,146 @@ class Torzslap4
      */
     private $megjegyzesek;
 
+    /**
+     * @var boolean $btlan_forrashely
+     *
+     * @ORM\Column(name="btlan_forrashely", type="boolean", nullable=true)
+     */
+    private $btlan_forrashely;
+
+    /**
+     * @var boolean $btlan_jelzet
+     *
+     * @ORM\Column(name="btlan_jelzet", type="boolean", nullable=true)
+     */
+    private $btlan_jelzet;
+
+    /**
+     * @var boolean $btlan_vallalkozo_neve_szab
+     *
+     * @ORM\Column(name="btlan_vallalkozo_neve_szab", type="boolean", nullable=true)
+     */
+    private $btlan_vallalkozo_neve_szab;
+
+    /**
+     * @var boolean $btlan_vallalkozo_neve_irva
+     *
+     * @ORM\Column(name="btlan_vallalkozo_neve_irva", type="boolean", nullable=true)
+     */
+    private $btlan_vallalkozo_neve_irva;
+
+    /**
+     * @var boolean $btlan_vallalkozo_szem_adatai
+     *
+     * @ORM\Column(name="btlan_vallalkozo_szem_adatai", type="boolean", nullable=true)
+     */
+    private $btlan_vallalkozo_szem_adatai;
+
+    /**
+     * @var boolean $btlan_uzlettars_neve_szab
+     *
+     * @ORM\Column(name="btlan_uzlettars_neve_szab", type="boolean", nullable=true)
+     */
+    private $btlan_uzlettars_neve_szab;
+
+    /**
+     * @var boolean $btlan_uzlettars_neve_irva
+     *
+     * @ORM\Column(name="btlan_uzlettars_neve_irva", type="boolean", nullable=true)
+     */
+    private $btlan_uzlettars_neve_irva;
+
+    /**
+     * @var boolean $btlan_uzlettars_szem_adatai
+     *
+     * @ORM\Column(name="btlan_uzlettars_szem_adatai", type="boolean", nullable=true)
+     */
+    private $btlan_uzlettars_szem_adatai;
+
+    /**
+     * @var boolean $btlan_foglalk_vallalk_szab
+     *
+     * @ORM\Column(name="btlan_foglalk_vallalk_szab", type="boolean", nullable=true)
+     */
+    private $btlan_foglalk_vallalk_szab;
+
+    /**
+     * @var boolean $btlan_foglalk_vallalk_irva
+     *
+     * @ORM\Column(name="btlan_foglalk_vallalk_irva", type="boolean", nullable=true)
+     */
+    private $btlan_foglalk_vallalk_irva;
+
+    /**
+     * @var boolean $btlan_foglalk_vallalk_neve
+     *
+     * @ORM\Column(name="btlan_foglalk_vallalk_neve", type="boolean", nullable=true)
+     */
+    private $btlan_foglalk_vallalk_neve;
+
+    /**
+     * @var boolean $btlan_telep_cimhelye_szab
+     *
+     * @ORM\Column(name="btlan_telep_cimhelye_szab", type="boolean", nullable=true)
+     */
+    private $btlan_telep_cimhelye_szab;
+
+    /**
+     * @var boolean $btlan_telep_cimhelye_irva
+     *
+     * @ORM\Column(name="btlan_telep_cimhelye_irva", type="boolean", nullable=true)
+     */
+    private $btlan_telep_cimhelye_irva;
+
+    /**
+     * @var boolean $btlan_ip_ig_szama
+     *
+     * @ORM\Column(name="btlan_ip_ig_szama", type="boolean", nullable=true)
+     */
+    private $btlan_ip_ig_szama;
+
+    /**
+     * @var boolean $btlan_hivatk_eng_sz
+     *
+     * @ORM\Column(name="btlan_hivatk_eng_sz", type="boolean", nullable=true)
+     */
+    private $btlan_hivatk_eng_sz;
+
+    /**
+     * @var boolean $btlan_telepengedely
+     *
+     * @ORM\Column(name="btlan_telepengedely", type="boolean", nullable=true)
+     */
+    private $btlan_telepengedely;
+
+    /**
+     * @var boolean $btlan_uzletvez_elarusito
+     *
+     * @ORM\Column(name="btlan_uzletvez_elarusito", type="boolean", nullable=true)
+     */
+    private $btlan_uzletvez_elarusito;
+
+    /**
+     * @var boolean $btlan_modositas_valtozas_beszuntetes
+     *
+     * @ORM\Column(name="btlan_modositas_valtozas_beszuntetes", type="boolean", nullable=true)
+     */
+    private $btlan_modositas_valtozas_beszuntetes;
+
+    /**
+     * @var boolean $btlan_mod_hivatkozasa
+     *
+     * @ORM\Column(name="btlan_mod_hivatkozasa", type="boolean", nullable=true)
+     */
+    private $btlan_mod_hivatkozasa;
+
+    /**
+     * @var boolean $btlan_tovabbi_egykoru_adat
+     *
+     * @ORM\Column(name="btlan_tovabbi_egykoru_adat", type="boolean", nullable=true)
+     */
+    private $btlan_tovabbi_egykoru_adat;
+
 
     /**
      * Get id
@@ -729,5 +869,405 @@ class Torzslap4
     public function getJelzet()
     {
         return $this->getJelzetOsztaly()."-".$this->getJelzetSsz()."/".$this->getJelzetEv();
+    }
+
+    /**
+     * Set btlan_forrashely
+     *
+     * @param boolean $btlanForrashely
+     */
+    public function setBtlanForrashely($btlanForrashely)
+    {
+        $this->btlan_forrashely = $btlanForrashely;
+    }
+
+    /**
+     * Get btlan_forrashely
+     *
+     * @return boolean 
+     */
+    public function getBtlanForrashely()
+    {
+        return $this->btlan_forrashely;
+    }
+
+    /**
+     * Set btlan_jelzet
+     *
+     * @param boolean $btlanJelzet
+     */
+    public function setBtlanJelzet($btlanJelzet)
+    {
+        $this->btlan_jelzet = $btlanJelzet;
+    }
+
+    /**
+     * Get btlan_jelzet
+     *
+     * @return boolean 
+     */
+    public function getBtlanJelzet()
+    {
+        return $this->btlan_jelzet;
+    }
+
+    /**
+     * Set btlan_vallalkozo_neve_szab
+     *
+     * @param boolean $btlanVallalkozoNeveSzab
+     */
+    public function setBtlanVallalkozoNeveSzab($btlanVallalkozoNeveSzab)
+    {
+        $this->btlan_vallalkozo_neve_szab = $btlanVallalkozoNeveSzab;
+    }
+
+    /**
+     * Get btlan_vallalkozo_neve_szab
+     *
+     * @return boolean 
+     */
+    public function getBtlanVallalkozoNeveSzab()
+    {
+        return $this->btlan_vallalkozo_neve_szab;
+    }
+
+    /**
+     * Set btlan_vallalkozo_neve_irva
+     *
+     * @param boolean $btlanVallalkozoNeveIrva
+     */
+    public function setBtlanVallalkozoNeveIrva($btlanVallalkozoNeveIrva)
+    {
+        $this->btlan_vallalkozo_neve_irva = $btlanVallalkozoNeveIrva;
+    }
+
+    /**
+     * Get btlan_vallalkozo_neve_irva
+     *
+     * @return boolean 
+     */
+    public function getBtlanVallalkozoNeveIrva()
+    {
+        return $this->btlan_vallalkozo_neve_irva;
+    }
+
+    /**
+     * Set btlan_vallalkozo_szem_adatai
+     *
+     * @param boolean $btlanVallalkozoSzemAdatai
+     */
+    public function setBtlanVallalkozoSzemAdatai($btlanVallalkozoSzemAdatai)
+    {
+        $this->btlan_vallalkozo_szem_adatai = $btlanVallalkozoSzemAdatai;
+    }
+
+    /**
+     * Get btlan_vallalkozo_szem_adatai
+     *
+     * @return boolean 
+     */
+    public function getBtlanVallalkozoSzemAdatai()
+    {
+        return $this->btlan_vallalkozo_szem_adatai;
+    }
+
+    /**
+     * Set btlan_uzlettars_neve_szab
+     *
+     * @param boolean $btlanUzlettarsNeveSzab
+     */
+    public function setBtlanUzlettarsNeveSzab($btlanUzlettarsNeveSzab)
+    {
+        $this->btlan_uzlettars_neve_szab = $btlanUzlettarsNeveSzab;
+    }
+
+    /**
+     * Get btlan_uzlettars_neve_szab
+     *
+     * @return boolean 
+     */
+    public function getBtlanUzlettarsNeveSzab()
+    {
+        return $this->btlan_uzlettars_neve_szab;
+    }
+
+    /**
+     * Set btlan_uzlettars_neve_irva
+     *
+     * @param boolean $btlanUzlettarsNeveIrva
+     */
+    public function setBtlanUzlettarsNeveIrva($btlanUzlettarsNeveIrva)
+    {
+        $this->btlan_uzlettars_neve_irva = $btlanUzlettarsNeveIrva;
+    }
+
+    /**
+     * Get btlan_uzlettars_neve_irva
+     *
+     * @return boolean 
+     */
+    public function getBtlanUzlettarsNeveIrva()
+    {
+        return $this->btlan_uzlettars_neve_irva;
+    }
+
+    /**
+     * Set btlan_uzlettars_szem_adatai
+     *
+     * @param boolean $btlanUzlettarsSzemAdatai
+     */
+    public function setBtlanUzlettarsSzemAdatai($btlanUzlettarsSzemAdatai)
+    {
+        $this->btlan_uzlettars_szem_adatai = $btlanUzlettarsSzemAdatai;
+    }
+
+    /**
+     * Get btlan_uzlettars_szem_adatai
+     *
+     * @return boolean 
+     */
+    public function getBtlanUzlettarsSzemAdatai()
+    {
+        return $this->btlan_uzlettars_szem_adatai;
+    }
+
+    /**
+     * Set btlan_foglalk_vallalk_szab
+     *
+     * @param boolean $btlanFoglalkVallalkSzab
+     */
+    public function setBtlanFoglalkVallalkSzab($btlanFoglalkVallalkSzab)
+    {
+        $this->btlan_foglalk_vallalk_szab = $btlanFoglalkVallalkSzab;
+    }
+
+    /**
+     * Get btlan_foglalk_vallalk_szab
+     *
+     * @return boolean 
+     */
+    public function getBtlanFoglalkVallalkSzab()
+    {
+        return $this->btlan_foglalk_vallalk_szab;
+    }
+
+    /**
+     * Set btlan_foglalk_vallalk_irva
+     *
+     * @param boolean $btlanFoglalkVallalkIrva
+     */
+    public function setBtlanFoglalkVallalkIrva($btlanFoglalkVallalkIrva)
+    {
+        $this->btlan_foglalk_vallalk_irva = $btlanFoglalkVallalkIrva;
+    }
+
+    /**
+     * Get btlan_foglalk_vallalk_irva
+     *
+     * @return boolean 
+     */
+    public function getBtlanFoglalkVallalkIrva()
+    {
+        return $this->btlan_foglalk_vallalk_irva;
+    }
+
+    /**
+     * Set btlan_foglalk_vallalk_neve
+     *
+     * @param boolean $btlanFoglalkVallalkNeve
+     */
+    public function setBtlanFoglalkVallalkNeve($btlanFoglalkVallalkNeve)
+    {
+        $this->btlan_foglalk_vallalk_neve = $btlanFoglalkVallalkNeve;
+    }
+
+    /**
+     * Get btlan_foglalk_vallalk_neve
+     *
+     * @return boolean 
+     */
+    public function getBtlanFoglalkVallalkNeve()
+    {
+        return $this->btlan_foglalk_vallalk_neve;
+    }
+
+    /**
+     * Set btlan_telep_cimhelye_szab
+     *
+     * @param boolean $btlanTelepCimhelyeSzab
+     */
+    public function setBtlanTelepCimhelyeSzab($btlanTelepCimhelyeSzab)
+    {
+        $this->btlan_telep_cimhelye_szab = $btlanTelepCimhelyeSzab;
+    }
+
+    /**
+     * Get btlan_telep_cimhelye_szab
+     *
+     * @return boolean 
+     */
+    public function getBtlanTelepCimhelyeSzab()
+    {
+        return $this->btlan_telep_cimhelye_szab;
+    }
+
+    /**
+     * Set btlan_telep_cimhelye_irva
+     *
+     * @param boolean $btlanTelepCimhelyeIrva
+     */
+    public function setBtlanTelepCimhelyeIrva($btlanTelepCimhelyeIrva)
+    {
+        $this->btlan_telep_cimhelye_irva = $btlanTelepCimhelyeIrva;
+    }
+
+    /**
+     * Get btlan_telep_cimhelye_irva
+     *
+     * @return boolean 
+     */
+    public function getBtlanTelepCimhelyeIrva()
+    {
+        return $this->btlan_telep_cimhelye_irva;
+    }
+
+    /**
+     * Set btlan_ip_ig_szama
+     *
+     * @param boolean $btlanIpIgSzama
+     */
+    public function setBtlanIpIgSzama($btlanIpIgSzama)
+    {
+        $this->btlan_ip_ig_szama = $btlanIpIgSzama;
+    }
+
+    /**
+     * Get btlan_ip_ig_szama
+     *
+     * @return boolean 
+     */
+    public function getBtlanIpIgSzama()
+    {
+        return $this->btlan_ip_ig_szama;
+    }
+
+    /**
+     * Set btlan_hivatk_eng_sz
+     *
+     * @param boolean $btlanHivatkEngSz
+     */
+    public function setBtlanHivatkEngSz($btlanHivatkEngSz)
+    {
+        $this->btlan_hivatk_eng_sz = $btlanHivatkEngSz;
+    }
+
+    /**
+     * Get btlan_hivatk_eng_sz
+     *
+     * @return boolean 
+     */
+    public function getBtlanHivatkEngSz()
+    {
+        return $this->btlan_hivatk_eng_sz;
+    }
+
+    /**
+     * Set btlan_telepengedely
+     *
+     * @param boolean $btlanTelepengedely
+     */
+    public function setBtlanTelepengedely($btlanTelepengedely)
+    {
+        $this->btlan_telepengedely = $btlanTelepengedely;
+    }
+
+    /**
+     * Get btlan_telepengedely
+     *
+     * @return boolean 
+     */
+    public function getBtlanTelepengedely()
+    {
+        return $this->btlan_telepengedely;
+    }
+
+    /**
+     * Set btlan_uzletvez_elarusito
+     *
+     * @param boolean $btlanUzletvezElarusito
+     */
+    public function setBtlanUzletvezElarusito($btlanUzletvezElarusito)
+    {
+        $this->btlan_uzletvez_elarusito = $btlanUzletvezElarusito;
+    }
+
+    /**
+     * Get btlan_uzletvez_elarusito
+     *
+     * @return boolean 
+     */
+    public function getBtlanUzletvezElarusito()
+    {
+        return $this->btlan_uzletvez_elarusito;
+    }
+
+    /**
+     * Set btlan_modositas_valtozas_beszuntetes
+     *
+     * @param boolean $btlanModositasValtozasBeszuntetes
+     */
+    public function setBtlanModositasValtozasBeszuntetes($btlanModositasValtozasBeszuntetes)
+    {
+        $this->btlan_modositas_valtozas_beszuntetes = $btlanModositasValtozasBeszuntetes;
+    }
+
+    /**
+     * Get btlan_modositas_valtozas_beszuntetes
+     *
+     * @return boolean 
+     */
+    public function getBtlanModositasValtozasBeszuntetes()
+    {
+        return $this->btlan_modositas_valtozas_beszuntetes;
+    }
+
+    /**
+     * Set btlan_mod_hivatkozasa
+     *
+     * @param boolean $btlanModHivatkozasa
+     */
+    public function setBtlanModHivatkozasa($btlanModHivatkozasa)
+    {
+        $this->btlan_mod_hivatkozasa = $btlanModHivatkozasa;
+    }
+
+    /**
+     * Get btlan_mod_hivatkozasa
+     *
+     * @return boolean 
+     */
+    public function getBtlanModHivatkozasa()
+    {
+        return $this->btlan_mod_hivatkozasa;
+    }
+
+    /**
+     * Set btlan_tovabbi_egykoru_adat
+     *
+     * @param boolean $btlanTovabbiEgykoruAdat
+     */
+    public function setBtlanTovabbiEgykoruAdat($btlanTovabbiEgykoruAdat)
+    {
+        $this->btlan_tovabbi_egykoru_adat = $btlanTovabbiEgykoruAdat;
+    }
+
+    /**
+     * Get btlan_tovabbi_egykoru_adat
+     *
+     * @return boolean 
+     */
+    public function getBtlanTovabbiEgykoruAdat()
+    {
+        return $this->btlan_tovabbi_egykoru_adat;
     }
 }

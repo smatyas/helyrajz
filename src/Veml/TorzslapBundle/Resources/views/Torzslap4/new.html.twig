@@ -15,6 +15,7 @@
     <div class="control-group">
         <label class="control-label">2. Forráshely (oldalig):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_forrashely) }}</span>
             {{ form_errors(form.forrashely_kot) }}
             {{ form_errors(form.forrashely_old) }}
 
@@ -26,6 +27,7 @@
     <div class="control-group">
         <label class="control-label">3. Jelzet (ssz-ig):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_jelzet) }}</span>
             {{ form_errors(form.jelzet_osztaly) }}
             {{ form_errors(form.jelzet_ssz) }}
             {{ form_errors(form.jelzet_ev) }}
@@ -38,6 +40,7 @@
     <div class="control-group">
         <label class="control-label">4. A vállalkozó neve (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_vallalkozo_neve_szab) }}</span>
             {{ form_errors(form.vallalkozo_neve_szab) }}
             {{ form_widget(form.vallalkozo_neve_szab, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -46,6 +49,7 @@
     <div class="control-group">
         <label class="control-label">5. A vállalkozó neve (írva):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_vallalkozo_neve_irva) }}</span>
             {{ form_errors(form.vallalkozo_neve_irva) }}
             {{ form_widget(form.vallalkozo_neve_irva, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -54,6 +58,7 @@
     <div class="control-group">
         <label class="control-label">6. (A vállalkozó szem. adatai):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_vallalkozo_szem_adatai) }}</span>
             {{ form_errors(form.vallalkozo_szem_adatai) }}
             {{ form_widget(form.vallalkozo_szem_adatai, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -62,6 +67,7 @@
     <div class="control-group">
         <label class="control-label">7. Az esetl. üzlettárs neve (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_uzlettars_neve_szab) }}</span>
             {{ form_errors(form.uzlettars_neve_szab) }}
             {{ form_widget(form.uzlettars_neve_szab, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -70,6 +76,7 @@
     <div class="control-group">
         <label class="control-label">8. Az esetl. üzlettárs neve (írva):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_uzlettars_neve_irva) }}</span>
             {{ form_errors(form.uzlettars_neve_irva) }}
             {{ form_widget(form.uzlettars_neve_irva, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -78,6 +85,7 @@
     <div class="control-group">
         <label class="control-label">9. (Az esetl. üzlettárs szem. adatai):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_uzlettars_szem_adatai) }}</span>
             {{ form_errors(form.uzlettars_szem_adatai) }}
             {{ form_widget(form.uzlettars_szem_adatai, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -86,6 +94,7 @@
     <div class="control-group">
         <label class="control-label">10. Foglalk., vállalk. (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_foglalk_vallalk_szab) }}</span>
             {{ form_errors(form.foglalk_vallalk_szab) }}
             {{ form_widget(form.foglalk_vallalk_szab, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -94,6 +103,7 @@
     <div class="control-group">
         <label class="control-label">11. Foglalk., vállalk. (írva):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_foglalk_vallalk_irva) }}</span>
             {{ form_errors(form.foglalk_vallalk_irva) }}
             {{ form_widget(form.foglalk_vallalk_irva, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -102,6 +112,7 @@
     <div class="control-group">
         <label class="control-label">12. A foglalk., vállalk. "neve":</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_foglalk_vallalk_neve) }}</span>
             {{ form_errors(form.foglalk_vallalk_neve) }}
             {{ form_widget(form.foglalk_vallalk_neve, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -110,6 +121,7 @@
     <div class="control-group">
         <label class="control-label">13. A telep címe (szab.):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_telep_cimhelye_szab) }}</span>
             {{ form_errors(form.telep_cimhelye_szab) }}
             {{ form_widget(form.telep_cimhelye_szab, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -118,6 +130,7 @@
     <div class="control-group">
         <label class="control-label">14. A telep címe (írva):</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_telep_cimhelye_irva) }}</span>
             {{ form_errors(form.telep_cimhelye_irva) }}
             {{ form_widget(form.telep_cimhelye_irva, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -126,6 +139,7 @@
     <div class="control-group">
         <label class="control-label">15. Ip. ig. száma, kelte:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_ip_ig_szama) }}</span>
             {{ form_errors(form.ip_ig_szama) }}
             {{ form_errors(form.ip_ig_kelte) }}
 
@@ -136,6 +150,7 @@
     <div class="control-group">
         <label class="control-label">16. Hivatk. eng. sz.:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_hivatk_eng_sz) }}</span>
             {{ form_errors(form.hivatk_eng_sz) }}
             {{ form_widget(form.hivatk_eng_sz, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -144,6 +159,7 @@
     <div class="control-group">
         <label class="control-label">17. Telepengedély:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_telepengedely) }}</span>
             {{ form_errors(form.telepengedely) }}
             {{ form_widget(form.telepengedely, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -152,6 +168,7 @@
     <div class="control-group">
         <label class="control-label">18. Üzletvez., elárusító:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_uzletvez_elarusito) }}</span>
             {{ form_errors(form.uzletvez_elarusito) }}
             {{ form_widget(form.uzletvez_elarusito, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -160,6 +177,7 @@
     <div class="control-group">
         <label class="control-label">19. Módosítás, változás, beszüntetés:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_modositas_valtozas_beszuntetes) }}</span>
             {{ form_errors(form.modositas_valtozas_beszuntetes) }}
             {{ form_widget(form.modositas_valtozas_beszuntetes, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -168,6 +186,7 @@
     <div class="control-group">
         <label class="control-label">20. A mód. hivatkozása:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_mod_hivatkozasa) }}</span>
             {{ form_errors(form.mod_hivatkozasa) }}
             {{ form_widget(form.mod_hivatkozasa, {'attr': {'class': 'span4'}}) }}
         </div>
@@ -176,6 +195,7 @@
     <div class="control-group">
         <label class="control-label">21. További egykorú adat:</label>
         <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_tovabbi_egykoru_adat) }}</span>
             {{ form_errors(form.tovabbi_egykoru_adat) }}
             {{ form_widget(form.tovabbi_egykoru_adat, {'attr': {'class': 'span4'}}) }}
         </div>
