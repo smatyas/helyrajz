@@ -101,7 +101,7 @@ class Torzslap4
     /**
      * @var string $foglalk_vallalk_szab
      *
-     * @ORM\Column(name="foglalk_vallalk_szab", type="string", length=255, nullable=true)
+     * @ORM\Column(name="foglalk_vallalk_szab", type="text", nullable=true)
      */
     private $foglalk_vallalk_szab;
 
