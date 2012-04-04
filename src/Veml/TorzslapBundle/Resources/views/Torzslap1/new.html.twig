@@ -23,7 +23,7 @@
             {{ form_errors(form.oszlop) }}
             {{ form_errors(form.hasab) }}
     
-            {{ form_widget(form.sor_kot) }} sor., köt.;
+            {{ form_widget(form.sor_kot, {'attr': {'class': 'input-small'}}) }} sor., köt.;
             {{ form_widget(form.lap, {'attr': {'class': 'input-mini'}}) }} lap
             {{ form_widget(form.oldal, {'attr': {'class': 'input-mini'}}) }} old.
             {{ form_widget(form.oszlop, {'attr': {'class': 'input-mini'}}) }} op.
@@ -250,7 +250,7 @@
 
     <div class="form-actions">
         <button type="submit" class="btn btn-primary">Mentés</button>
-        <a href="{{ path('1_sz_torzslap') }}" class="btn">
+        <a href="{{ path('1_sz_torzslap') }}#bottom" class="btn">
             Vissza a listához
         </a>
     </div>
