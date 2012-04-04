@@ -247,10 +247,23 @@
 
     {{ form_widget(edit_form) }}
     <div class="form-actions">
-        <button type="submit" class="btn btn-primary">Mentés</button>
-        <a href="{{ path('1_sz_torzslap') }}#bottom" class="btn">
-            Vissza a listához
-        </a>
+            <button type="submit" class="btn btn-primary">Mentés</button>
+            <a href="{{ path('1_sz_torzslap') }}#bottom" class="btn">
+                Vissza a listához
+            </a>
+        <div class="pull-right">
+            {% if item_prev %}
+                <a href="{{ path('1_sz_torzslap_edit', { 'id': item_prev.id }) }}" class="btn"><i class="icon-arrow-left"></i> Előző</a>
+            {% else %}
+                <button class="btn disabled" disabled="disabled"><i class="icon-arrow-left"></i> Előző</button>
+            {% endif %}
+
+            {% if item_next %}
+                <a href="{{ path('1_sz_torzslap_edit', { 'id': item_next.id }) }}" class="btn">Következő <i class="icon-arrow-right"></i></a>
+            {% else %}
+                <button class="btn disabled" disabled="disabled">Következő <i class="icon-arrow-right"></i></button>
+            {% endif %}
+        </div>
     </div>
 </form>
 
