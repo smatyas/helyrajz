@@ -113,11 +113,29 @@ class Torzslap2Controller extends Controller
     {
         $em = $this->getDoctrine()->getEntityManager();
 
-        $entity = $em->getRepository('VemlTorzslapBundle:Torzslap2')->find($id);
+        /** @var $repo Torzslap2Repository */
+        $repo = $em->getRepository('VemlTorzslapBundle:Torzslap2');
+
+        /** @var $entity Torzslap2 */
+        $entity = $repo->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Torzslap2 entity.');
         }
+
+        $itemPrev = $repo->createQueryBuilder('l')
+            ->where('l.id < :id')
+            ->orderBy('l.id', 'DESC')
+            ->setMaxResults(1)
+            ->setParameter('id', $entity->getId())
+            ->getQuery()->getOneOrNullResult();
+
+        $itemNext = $repo->createQueryBuilder('l')
+            ->where('l.id > :id')
+            ->orderBy('l.id', 'ASC')
+            ->setMaxResults(1)
+            ->setParameter('id', $entity->getId())
+            ->getQuery()->getOneOrNullResult();
 
         $editForm = $this->createForm(new Torzslap2Type(), $entity);
         $deleteForm = $this->createDeleteForm($id);
@@ -126,6 +144,8 @@ class Torzslap2Controller extends Controller
             'entity'      => $entity,
             'edit_form'   => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
+            'item_prev'   => $itemPrev,
+            'item_next'   => $itemNext,
         );
     }
 
