@@ -119,7 +119,7 @@
     </div>
 
     <div class="control-group">
-        <label class="control-label">13. A telep címe (szab.):</label>
+        <label class="control-label">13. A telep címe, utca (szab.):</label>
         <div class="controls">
             <span class="bizonytalan">{{ form_widget(form.btlan_telep_cimhelye_szab) }}</span>
             {{ form_errors(form.telep_cimhelye_szab) }}
@@ -128,7 +128,7 @@
     </div>
 
     <div class="control-group">
-        <label class="control-label">14. A telep címe (írva):</label>
+        <label class="control-label">14. A telep címe, utca (írva):</label>
         <div class="controls">
             <span class="bizonytalan">{{ form_widget(form.btlan_telep_cimhelye_irva) }}</span>
             {{ form_errors(form.telep_cimhelye_irva) }}
@@ -137,7 +137,19 @@
     </div>
 
     <div class="control-group">
-        <label class="control-label">15. Ip. ig. száma, kelte:</label>
+        <label class="control-label">15. A telep házszáma, a ház neve:</label>
+        <div class="controls">
+            <span class="bizonytalan">{{ form_widget(form.btlan_telep_hazszam) }}</span>
+            {{ form_errors(form.telep_hazszam) }}
+            {{ form_errors(form.telep_haz_neve) }}
+
+            {{ form_widget(form.telep_hazszam, {'attr': {'class': 'input-mini'}}) }}
+            {{ form_widget(form.telep_haz_neve) }}
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">16. Ip. ig. száma, kelte:</label>
         <div class="controls">
             <span class="bizonytalan">{{ form_widget(form.btlan_ip_ig_szama) }}</span>
             {{ form_errors(form.ip_ig_szama) }}
@@ -148,7 +160,7 @@
     </div>
 
     <div class="control-group">
-        <label class="control-label">16. Hivatk. eng. sz.:</label>
+        <label class="control-label">17. Hivatk. eng. sz.:</label>
         <div class="controls">
             <span class="bizonytalan">{{ form_widget(form.btlan_hivatk_eng_sz) }}</span>
             {{ form_errors(form.hivatk_eng_sz) }}
@@ -157,7 +169,7 @@
     </div>
 
     <div class="control-group">
-        <label class="control-label">17. Telepengedély:</label>
+        <label class="control-label">18. Telepengedély:</label>
         <div class="controls">
             <span class="bizonytalan">{{ form_widget(form.btlan_telepengedely) }}</span>
             {{ form_errors(form.telepengedely) }}
@@ -166,7 +178,7 @@
     </div>
 
     <div class="control-group">
-        <label class="control-label">18. Üzletvez., elárusító:</label>
+        <label class="control-label">19. Üzletvez., elárusító:</label>
         <div class="controls">
             <span class="bizonytalan">{{ form_widget(form.btlan_uzletvez_elarusito) }}</span>
             {{ form_errors(form.uzletvez_elarusito) }}
@@ -175,7 +187,7 @@
     </div>
 
     <div class="control-group">
-        <label class="control-label">19. Módosítás, változás, beszüntetés:</label>
+        <label class="control-label">20. Módosítás, változás, beszüntetés:</label>
         <div class="controls">
             <span class="bizonytalan">{{ form_widget(form.btlan_modositas_valtozas_beszuntetes) }}</span>
             {{ form_errors(form.modositas_valtozas_beszuntetes) }}
@@ -184,7 +196,7 @@
     </div>
 
     <div class="control-group">
-        <label class="control-label">20. A mód. hivatkozása:</label>
+        <label class="control-label">21. A mód. hivatkozása:</label>
         <div class="controls">
             <span class="bizonytalan">{{ form_widget(form.btlan_mod_hivatkozasa) }}</span>
             {{ form_errors(form.mod_hivatkozasa) }}
@@ -193,7 +205,7 @@
     </div>
 
     <div class="control-group">
-        <label class="control-label">21. További egykorú adat:</label>
+        <label class="control-label">22. További egykorú adat:</label>
         <div class="controls">
             <span class="bizonytalan">{{ form_widget(form.btlan_tovabbi_egykoru_adat) }}</span>
             {{ form_errors(form.tovabbi_egykoru_adat) }}
@@ -202,7 +214,7 @@
     </div>
 
     <div class="control-group">
-        <label class="control-label">22. Megjegyzések:</label>
+        <label class="control-label">23. Megjegyzések:</label>
         <div class="controls">
             {{ form_errors(form.megjegyzesek) }}
             {{ form_widget(form.megjegyzesek, {'attr': {'class': 'span4'}}) }}

@@ -134,6 +134,20 @@ class Torzslap4
     private $telep_cimhelye_irva;
 
     /**
+     * @var string $telep_hazszam
+     *
+     * @ORM\Column(name="telep_hazszam", type="string", length=255, nullable=true)
+     */
+    private $telep_hazszam;
+
+    /**
+     * @var string $telep_haz_neve
+     *
+     * @ORM\Column(name="telep_haz_neve", type="string", length=255, nullable=true)
+     */
+    private $telep_haz_neve;
+
+    /**
      * @var string $ip_ig_szama
      *
      * @ORM\Column(name="ip_ig_szama", type="string", length=255, nullable=true)
@@ -286,6 +300,13 @@ class Torzslap4
      * @ORM\Column(name="btlan_telep_cimhelye_irva", type="boolean", nullable=true)
      */
     private $btlan_telep_cimhelye_irva;
+
+    /**
+     * @var boolean $btlan_telep_hazszam
+     *
+     * @ORM\Column(name="btlan_telep_hazszam", type="boolean", nullable=true)
+     */
+    private $btlan_telep_hazszam;
 
     /**
      * @var boolean $btlan_ip_ig_szama
@@ -1269,5 +1290,53 @@ class Torzslap4
     public function getBtlanTovabbiEgykoruAdat()
     {
         return $this->btlan_tovabbi_egykoru_adat;
+    }
+
+    /**
+     * @param string $telep_haz_neve
+     */
+    public function setTelepHazNeve($telep_haz_neve)
+    {
+        $this->telep_haz_neve = $telep_haz_neve;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTelepHazNeve()
+    {
+        return $this->telep_haz_neve;
+    }
+
+    /**
+     * @param string $telep_hazszam
+     */
+    public function setTelepHazszam($telep_hazszam)
+    {
+        $this->telep_hazszam = $telep_hazszam;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTelepHazszam()
+    {
+        return $this->telep_hazszam;
+    }
+
+    /**
+     * @param boolean $btlan_telep_hazszam
+     */
+    public function setBtlanTelepHazszam($btlan_telep_hazszam)
+    {
+        $this->btlan_telep_hazszam = $btlan_telep_hazszam;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getBtlanTelepHazszam()
+    {
+        return $this->btlan_telep_hazszam;
     }
 }
