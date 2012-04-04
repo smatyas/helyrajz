@@ -7,6 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Veml\TorzslapBundle\Entity\Torzslap4;
+use Veml\TorzslapBundle\Entity\Torzslap4Repository;
 use Veml\TorzslapBundle\Form\Torzslap4Type;
 
 /**
@@ -26,7 +27,9 @@ class Torzslap4Controller extends Controller
     {
         $em = $this->getDoctrine()->getEntityManager();
 
-        $entities = $em->getRepository('VemlTorzslapBundle:Torzslap4')->findAll();
+        /** @var $repo Torzslap4Repository */
+        $repo = $em->getRepository('VemlTorzslapBundle:Torzslap4');
+        $entities = $repo->createQueryBuilder('l')->orderBy('l.id', 'ASC')->getQuery()->getResult();
 
         return array('entities' => $entities);
     }
