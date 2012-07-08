@@ -113,6 +113,32 @@ class StatisticsController extends Controller
         $statTorzslap3 = array(
             'chars' => 0,
         );
+        foreach ($torzslap3Entities as $torzslap3) {
+            /** @var $torzslap3 Torzslap3 */
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getAnyanyelve());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getElotte());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getForrashely());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getForrashelyKot());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getForrashelyOp());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getGondviseloAllapFoglViszonyIrva());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getGondviseloFoglSzab());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getGondviseloNeveSzab());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getHazszam());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getJelzet());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getJelzetFsz());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getJelzetTanev());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getLakhelyLakcimUtcaIrva());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getLakhelyLakcimUtcaSzab());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getMegjegyzesek());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getNovendekNeveIrva());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getNovendekNeveSzab());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getNovendekSzulHelyeIrva());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getNovendekSzulHelyeSzab());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getNovendekSzulIdejeEv());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getNovendekSzulIdejeHo());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getNovendekSzulIdejeNap());
+            $statTorzslap3['chars'] += mb_strlen($torzslap3->getTovabbiEgykoruAdat());
+        }
 
         // get statistics for Torzslap4
         $torzslap4Entities = $torzslap4Repo->findAll();
