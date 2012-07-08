@@ -10,6 +10,7 @@
         <th>2. sz. törzslapok</th>
         <th>3. sz. törzslapok</th>
         <th>4. sz. törzslapok</th>
+        <th>Összesen</th>
     </tr>
     <tr>
         <th>szöveges mezők összesített hossza</th>
@@ -17,6 +18,7 @@
         <td>{{ statistics.torzslap2.chars }}</td>
         <td>{{ statistics.torzslap3.chars }}</td>
         <td>{{ statistics.torzslap4.chars }}</td>
+        <td>{{ statistics.torzslap1.chars + statistics.torzslap2.chars + statistics.torzslap3.chars + statistics.torzslap4.chars }}</td>
     </tr>
 </table>
 {% endblock %}

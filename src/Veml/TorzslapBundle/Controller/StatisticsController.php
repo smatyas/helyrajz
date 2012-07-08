@@ -8,6 +8,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 use Veml\TorzslapBundle\Entity\Torzslap1;
 use Veml\TorzslapBundle\Entity\Torzslap1Repository;
+use Veml\TorzslapBundle\Entity\Torzslap2;
+use Veml\TorzslapBundle\Entity\Torzslap2Repository;
+use Veml\TorzslapBundle\Entity\Torzslap3;
+use Veml\TorzslapBundle\Entity\Torzslap3Repository;
+use Veml\TorzslapBundle\Entity\Torzslap4;
+use Veml\TorzslapBundle\Entity\Torzslap4Repository;
+
 
 class StatisticsController extends Controller
 {
@@ -68,6 +75,38 @@ class StatisticsController extends Controller
         $statTorzslap2 = array(
             'chars' => 0,
         );
+        foreach ($torzslap2Entities as $torzslap2) {
+            /** @var $torzslap2 Torzslap2 */
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getAllapFoglViszonyIrva());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getForrashely());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getForrashelyAkvNeme());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getForrashelyFelek());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getForrashelyPd());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getHalalIdejeEv());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getHalalIdejeHo());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getHalalIdejeNap());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getHalalOkaIrva());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getHalalOkaSzab());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getHivSzekhely());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getJelzet());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getJelzetEv());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getJelzetFolyoszam());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getKoraEv());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getKoraHet());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getKoraHo());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getKoraNap());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getKoraOra());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getLakhelyHazszam());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getLakhelyUtcaIrva());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getLakhelyUtcaSzab());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getMegholtFoglSzab());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getMegholtNeveIrva());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getMegholtNeveSzab());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getMegjegyzesek());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getSzulHelyIrva());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getSzulHelySzab());
+            $statTorzslap2['chars'] += mb_strlen($torzslap2->getTovabbiEgykoruAdat());
+        }
 
         // get statistics for Torzslap3
         $torzslap3Entities = $torzslap3Repo->findAll();
