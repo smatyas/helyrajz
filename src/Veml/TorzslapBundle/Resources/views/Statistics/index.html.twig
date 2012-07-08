@@ -1,0 +1,22 @@
+{% extends 'VemlHelloBundle::base.html.twig' %}
+
+{% block body %}
+<h1>Statisztikák</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th></th>
+        <th>1. sz. törzslapok</th>
+        <th>2. sz. törzslapok</th>
+        <th>3. sz. törzslapok</th>
+        <th>4. sz. törzslapok</th>
+    </tr>
+    <tr>
+        <th>szöveges mezők összesített hossza</th>
+        <td>{{ statistics.torzslap1.chars }}</td>
+        <td>{{ statistics.torzslap2.chars }}</td>
+        <td>{{ statistics.torzslap3.chars }}</td>
+        <td>{{ statistics.torzslap4.chars }}</td>
+    </tr>
+</table>
+{% endblock %}

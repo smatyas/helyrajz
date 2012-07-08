@@ -18,6 +18,10 @@ _torzslap4:
     pattern: /torzslap4
     defaults: { _controller: VemlTorzslapBundle:Torzslap4:index }
 
+_statistics:
+    pattern: /statisztikak
+    defaults: { _controller: VemlTorzslapBundle:Statistics:index }
+
 VemlTorzslapBundle:
     resource: "@VemlTorzslapBundle/Controller/"
     type:     annotation
