@@ -1378,4 +1378,39 @@ class Torzslap3
     {
         return $this->btlan_tovabbi_egykoru_adat;
     }
+
+    /**
+     * Get typed characters count
+     *
+     * @return int
+     */
+    public function getCharactersCount()
+    {
+        $count = 0;
+        $count += mb_strlen($this->getAnyanyelve());
+        $count += mb_strlen($this->getElotte());
+        $count += mb_strlen($this->getForrashely());
+        $count += mb_strlen($this->getForrashelyKot());
+        $count += mb_strlen($this->getForrashelyOp());
+        $count += mb_strlen($this->getGondviseloAllapFoglViszonyIrva());
+        $count += mb_strlen($this->getGondviseloFoglSzab());
+        $count += mb_strlen($this->getGondviseloNeveSzab());
+        $count += mb_strlen($this->getHazszam());
+        $count += mb_strlen($this->getJelzet());
+        $count += mb_strlen($this->getJelzetFsz());
+        $count += mb_strlen($this->getJelzetTanev());
+        $count += mb_strlen($this->getLakhelyLakcimUtcaIrva());
+        $count += mb_strlen($this->getLakhelyLakcimUtcaSzab());
+        $count += mb_strlen($this->getMegjegyzesek());
+        $count += mb_strlen($this->getNovendekNeveIrva());
+        $count += mb_strlen($this->getNovendekNeveSzab());
+        $count += mb_strlen($this->getNovendekSzulHelyeIrva());
+        $count += mb_strlen($this->getNovendekSzulHelyeSzab());
+        $count += mb_strlen($this->getNovendekSzulIdejeEv());
+        $count += mb_strlen($this->getNovendekSzulIdejeHo());
+        $count += mb_strlen($this->getNovendekSzulIdejeNap());
+        $count += mb_strlen($this->getTovabbiEgykoruAdat());
+
+        return $count;
+    }
 }

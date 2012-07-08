@@ -1339,4 +1339,45 @@ class Torzslap4
     {
         return $this->btlan_telep_hazszam;
     }
+
+    /**
+     * Get typed characters count
+     *
+     * @return int
+     */
+    public function getCharactersCount()
+    {
+        $count = 0;
+        $count += mb_strlen($this->getFoglalkVallalkIrva());
+        $count += mb_strlen($this->getFoglalkVallalkNeve());
+        $count += mb_strlen($this->getFoglalkVallalkSzab());
+        $count += mb_strlen($this->getForrashely());
+        $count += mb_strlen($this->getForrashelyKot());
+        $count += mb_strlen($this->getForrashelyOld());
+        $count += mb_strlen($this->getHivatkEngSz());
+        $count += mb_strlen($this->getIpIgKelte());
+        $count += mb_strlen($this->getIpIgSzama());
+        $count += mb_strlen($this->getJelzet());
+        $count += mb_strlen($this->getJelzetEv());
+        $count += mb_strlen($this->getJelzetOsztaly());
+        $count += mb_strlen($this->getJelzetSsz());
+        $count += mb_strlen($this->getMegjegyzesek());
+        $count += mb_strlen($this->getModHivatkozasa());
+        $count += mb_strlen($this->getModositasValtozasBeszuntetes());
+        $count += mb_strlen($this->getTelepCimhelyeIrva());
+        $count += mb_strlen($this->getTelepCimhelyeSzab());
+        $count += mb_strlen($this->getTelepengedely());
+        $count += mb_strlen($this->getTelepHazNeve());
+        $count += mb_strlen($this->getTelepHazszam());
+        $count += mb_strlen($this->getTovabbiEgykoruAdat());
+        $count += mb_strlen($this->getUzlettarsNeveIrva());
+        $count += mb_strlen($this->getUzlettarsNeveSzab());
+        $count += mb_strlen($this->getUzlettarsSzemAdatai());
+        $count += mb_strlen($this->getUzletvezElarusito());
+        $count += mb_strlen($this->getVallalkozoNeveIrva());
+        $count += mb_strlen($this->getVallalkozoNeveSzab());
+        $count += mb_strlen($this->getVallalkozoSzemAdatai());
+
+        return $count;
+    }
 }

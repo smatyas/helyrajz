@@ -13,12 +13,20 @@
         <th>Összesen</th>
     </tr>
     <tr>
+        <th>bevitt törzslapok száma</th>
+        <td class="align_right">{{ statistics.torzslap1.entities }}</td>
+        <td class="align_right">{{ statistics.torzslap2.entities }}</td>
+        <td class="align_right">{{ statistics.torzslap3.entities }}</td>
+        <td class="align_right">{{ statistics.torzslap4.entities }}</td>
+        <td class="align_right">{{ statistics.torzslap1.entities + statistics.torzslap2.entities + statistics.torzslap3.entities + statistics.torzslap4.entities }}</td>
+    </tr>
+    <tr>
         <th>szöveges mezők összesített hossza</th>
-        <td>{{ statistics.torzslap1.chars }}</td>
-        <td>{{ statistics.torzslap2.chars }}</td>
-        <td>{{ statistics.torzslap3.chars }}</td>
-        <td>{{ statistics.torzslap4.chars }}</td>
-        <td>{{ statistics.torzslap1.chars + statistics.torzslap2.chars + statistics.torzslap3.chars + statistics.torzslap4.chars }}</td>
+        <td class="align_right">{{ statistics.torzslap1.chars }}</td>
+        <td class="align_right">{{ statistics.torzslap2.chars }}</td>
+        <td class="align_right">{{ statistics.torzslap3.chars }}</td>
+        <td class="align_right">{{ statistics.torzslap4.chars }}</td>
+        <td class="align_right">{{ statistics.torzslap1.chars + statistics.torzslap2.chars + statistics.torzslap3.chars + statistics.torzslap4.chars }}</td>
     </tr>
 </table>
 {% endblock %}

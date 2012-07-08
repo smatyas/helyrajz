@@ -1678,4 +1678,47 @@ class Torzslap1
     {
         return $this->btlan_tovabbi_egykoru_adat;
     }
+
+    /**
+     * Get typed characters count
+     *
+     * @return int
+     */
+    public function getCharactersCount()
+    {
+        $count = 0;
+        $count += mb_strlen($this->getAllapFoglViszonyIrva());
+        $count += mb_strlen($this->getEv());
+        $count += mb_strlen($this->getFoglalkozasaSzab());
+        $count += mb_strlen($this->getFolyoszam());
+        $count += mb_strlen($this->getForrashely());
+        $count += mb_strlen($this->getHalalIdejeEv());
+        $count += mb_strlen($this->getHalalIdejeHo());
+        $count += mb_strlen($this->getHalalIdejeNap());
+        $count += mb_strlen($this->getHalalKorulmenyei());
+        $count += mb_strlen($this->getHalalOkaIrva());
+        $count += mb_strlen($this->getHalalOkaSzab());
+        $count += mb_strlen($this->getHasab());
+        $count += mb_strlen($this->getHazNeve());
+        $count += mb_strlen($this->getHazszam());
+        $count += mb_strlen($this->getJelzet());
+        $count += mb_strlen($this->getKoraEv());
+        $count += mb_strlen($this->getKoraHet());
+        $count += mb_strlen($this->getKoraHo());
+        $count += mb_strlen($this->getKoraNap());
+        $count += mb_strlen($this->getKoraOra());
+        $count += mb_strlen($this->getLap());
+        $count += mb_strlen($this->getMaradtKkEsVagyon());
+        $count += mb_strlen($this->getMegholtNeveIrva());
+        $count += mb_strlen($this->getMegholtNeveSzab());
+        $count += mb_strlen($this->getMegjegyzesek());
+        $count += mb_strlen($this->getOldal());
+        $count += mb_strlen($this->getOszlop());
+        $count += mb_strlen($this->getSorKot());
+        $count += mb_strlen($this->getTovabbiEgykoruAdat());
+        $count += mb_strlen($this->getUtcaTelepulesIrva());
+        $count += mb_strlen($this->getUtcaTelepulesSzab());
+
+        return $count;
+    }
 }
