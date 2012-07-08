@@ -145,6 +145,38 @@ class StatisticsController extends Controller
         $statTorzslap4 = array(
             'chars' => 0,
         );
+        foreach ($torzslap4Entities as $torzslap4) {
+            /** @var $torzslap4 Torzslap4 */
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getFoglalkVallalkIrva());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getFoglalkVallalkNeve());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getFoglalkVallalkSzab());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getForrashely());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getForrashelyKot());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getForrashelyOld());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getHivatkEngSz());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getIpIgKelte());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getIpIgSzama());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getJelzet());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getJelzetEv());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getJelzetOsztaly());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getJelzetSsz());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getMegjegyzesek());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getModHivatkozasa());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getModositasValtozasBeszuntetes());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getTelepCimhelyeIrva());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getTelepCimhelyeSzab());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getTelepengedely());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getTelepHazNeve());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getTelepHazszam());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getTovabbiEgykoruAdat());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getUzlettarsNeveIrva());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getUzlettarsNeveSzab());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getUzlettarsSzemAdatai());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getUzletvezElarusito());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getVallalkozoNeveIrva());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getVallalkozoNeveSzab());
+            $statTorzslap4['chars'] += mb_strlen($torzslap4->getVallalkozoSzemAdatai());
+        }
 
         // return parameters for rendering
         return array('statistics' => array(
