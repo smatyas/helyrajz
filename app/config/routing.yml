@@ -18,9 +18,13 @@ _torzslap4:
     pattern: /torzslap4
     defaults: { _controller: VemlTorzslapBundle:Torzslap4:index }
 
-_statistics:
+_statisztikak:
     pattern: /statisztikak
     defaults: { _controller: VemlTorzslapBundle:Statistics:index }
+
+_hazszamok:
+    pattern: /hazszamok/{filter}
+    defaults: { _controller: VemlTorzslapBundle:Hazszam:index, filter: null }
 
 VemlTorzslapBundle:
     resource: "@VemlTorzslapBundle/Controller/"

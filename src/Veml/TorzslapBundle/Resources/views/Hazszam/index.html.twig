@@ -1,0 +1,31 @@
+{% extends 'VemlHelloBundle::base.html.twig' %}
+
+{% block body %}
+    <h1>Házszámok</h1>
+    {% if results is null %}
+        Házszám megadása:
+        <a href="{{ path('_hazszamok', {'filter': 'all'}) }}">Az összes házszám listázása.</a>
+    {% else %}
+        {% if results|length == 0 %}
+            Nincs a keresésnek megfelelő eredmény.
+        {% else %}
+            <table class="table table-bordered">
+                <tr>
+                    <th>Házszám</th>
+                    <th>Utcanév</th>
+                    <th>Törzslap</th>
+                </tr>
+                {% for hazszam,hazak in results %}
+                    {% for haz in hazak %}
+                        <tr>
+                            <td class="align_right">{{ hazszam }}</td>
+                            <td>{{ haz.utcanev }}</td>
+                            <td><a href="{{ haz.link }}" target="_blank">{{ haz.link_title }}</a></td>
+                        </tr>
+                    {% endfor %}
+                {% endfor %}
+            </table>
+        {% endif %}
+        <br/><a href="{{ path('_hazszamok') }}">Új keresés indítása</a>
+    {% endif %}
+{% endblock %}
