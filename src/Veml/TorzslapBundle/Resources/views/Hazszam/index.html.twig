@@ -3,12 +3,17 @@
 {% block body %}
     <h1>Házszámok</h1>
     {% if results is null %}
-        Házszám megadása:
+        Keresés:
+        <form action="{{ path('_hazszamok') }}" method="post" class="form-horizontal">
+            {{ form_widget(form) }}
+            <button type="submit">Keresés</button>
+        </form>
         <a href="{{ path('_hazszamok', {'filter': 'all'}) }}">Az összes házszám listázása.</a>
     {% else %}
         {% if results|length == 0 %}
             Nincs a keresésnek megfelelő eredmény.
         {% else %}
+            <a href="{{ path('_hazszamok') }}">Új keresés indítása</a><br/><br/>
             <table class="table table-bordered">
                 <tr>
                     <th>Házszám</th>

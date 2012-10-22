@@ -2,6 +2,7 @@
 
 namespace Veml\TorzslapBundle\Controller;
 
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -22,9 +23,22 @@ class HazszamController extends Controller
      * @Route("/hazszamok/{filter}", defaults={"filter" = "null"})
      * @Template()
      */
-    public function indexAction($filter = null)
+    public function indexAction(Request $request, $filter = null)
     {
         $res = null;
+        $form = $this->getSearchForm();
+
+        if ($request->getMethod() == 'POST') {
+            $form->bindRequest($request);
+
+            if ($form->isValid()) {
+                $data = $form->getData();
+                $filter = $data['hazszam'];
+            } else {
+                $filter = null;
+            }
+        }
+
         if ($filter == 'all' || is_numeric($filter)) {
             $res = array();
             $em = $this->getDoctrine()->getEntityManager();
@@ -103,9 +117,26 @@ class HazszamController extends Controller
             }
         }
 
-//        var_dump($res);
         return array(
             'results' => $res,
+            'form' => $form->createView(),
         );
+    }
+
+    /**
+     * Builds search form
+     *
+     * @return \Symfony\Component\Form\Form
+     */
+    private function getSearchForm()
+    {
+        $form = $this->createFormBuilder();
+        $form->add('hazszam', 'number', array(
+            'label' => 'Házszám',
+            'error_bubbling' => true,
+            'invalid_message' => 'Érvénytelen érték.'
+        ));
+
+        return $form->getForm();
     }
 }
