@@ -2,6 +2,7 @@
 
 namespace Veml\TorzslapBundle\Controller;
 
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -22,9 +23,22 @@ class UtcanevController extends Controller
      * @Route("/utcanevek/{filter}", defaults={"filter" = "null"})
      * @Template()
      */
-    public function indexAction($filter = null)
+    public function indexAction(Request $request, $filter = null)
     {
         $res = null;
+        $form = $this->getSearchForm();
+
+        if ($request->getMethod() == 'POST') {
+            $form->bindRequest($request);
+
+            if ($form->isValid()) {
+                $data = $form->getData();
+                $filter = $data['utcanev'];
+            } else {
+                $filter = null;
+            }
+        }
+
         if (!is_null($filter)) {
             $res = array();
             $em = $this->getDoctrine()->getEntityManager();
@@ -101,9 +115,25 @@ class UtcanevController extends Controller
             }
         }
 
-//        var_dump($res);
         return array(
             'results' => $res,
+            'form' => $form->createView(),
         );
+    }
+
+    /**
+     * Builds search form
+     *
+     * @return \Symfony\Component\Form\Form
+     */
+    private function getSearchForm()
+    {
+        $form = $this->createFormBuilder();
+        $form->add('utcanev', 'text', array(
+            'label' => 'Utcanév',
+            'error_bubbling' => true,
+        ));
+
+        return $form->getForm();
     }
 }
