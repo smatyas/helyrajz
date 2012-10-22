@@ -1,0 +1,31 @@
+{% extends 'VemlHelloBundle::base.html.twig' %}
+
+{% block body %}
+    <h1>Utcanevek</h1>
+    {% if results is null %}
+        Utcanév megadása:
+        <a href="{{ path('_utcanevek', {'filter': 'all'}) }}">Az összes utcanév listázása.</a>
+    {% else %}
+        {% if results|length == 0 %}
+            Nincs a keresésnek megfelelő eredmény.
+        {% else %}
+            <table class="table table-bordered">
+                <tr>
+                    <th>Utcanév</th>
+                    <th>Házszám</th>
+                    <th>Törzslap</th>
+                </tr>
+                {% for utcanev,utcak in results %}
+                    {% for haz in utcak %}
+                        <tr>
+                            <td class="align_right">{{ utcanev }}</td>
+                            <td>{{ haz.hazszam }}</td>
+                            <td><a href="{{ haz.link }}" target="_blank">{{ haz.link_title }}</a></td>
+                        </tr>
+                    {% endfor %}
+                {% endfor %}
+            </table>
+        {% endif %}
+        <br/><a href="{{ path('_utcanevek') }}">Új keresés indítása</a>
+    {% endif %}
+{% endblock %}

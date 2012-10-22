@@ -26,6 +26,10 @@ _hazszamok:
     pattern: /hazszamok/{filter}
     defaults: { _controller: VemlTorzslapBundle:Hazszam:index, filter: null }
 
+_utcanevek:
+    pattern: /utcanevek/{filter}
+    defaults: { _controller: VemlTorzslapBundle:Utcanev:index, filter: null }
+
 VemlTorzslapBundle:
     resource: "@VemlTorzslapBundle/Controller/"
     type:     annotation
