@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Veml\TorzslapBundle\Entity\Torzslap1
  *
- * @ORM\Table()
+ * @ORM\Table(name="torzslap1")
  * @ORM\Entity
  */
 class Torzslap1
