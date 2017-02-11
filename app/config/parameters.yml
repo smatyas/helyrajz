@@ -1,0 +1,15 @@
+parameters:
+    database_driver:   pdo_mysql
+    database_host:     db
+    database_port:     ~
+    database_name:     helyrajz
+    database_user:     helyrajz
+    database_password: helyrajz
+
+    mailer_transport:  smtp
+    mailer_host:       localhost
+    mailer_user:       ~
+    mailer_password:   ~
+
+    locale:            hu
+    secret:            vbew4bt8n548w5hgpw589wh45jejwf54ljkgtw
