@@ -1,9 +1,11 @@
 <?php
 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Debug\Debug;
 
 // If you don't want to setup permissions the proper way, just uncomment the following PHP line
-// read http://symfony.com/doc/current/book/installation.html#configuration-and-setup for more information
+// read http://symfony.com/doc/current/setup.html#checking-symfony-application-configuration-and-setup
+// for more information
 //umask(0000);
 
 // This check prevents access to debug front controllers that are deployed by accident to production servers.
@@ -21,8 +23,9 @@ if (getenv('DOCKER') !== '1' ) {
     }
 }
 
-$loader = require_once __DIR__.'/../app/bootstrap.php.cache';
-require_once __DIR__.'/../app/AppKernel.php';
+/** @var \Composer\Autoload\ClassLoader $loader */
+$loader = require __DIR__.'/../app/autoload.php';
+Debug::enable();
 
 $kernel = new AppKernel('dev', true);
 $kernel->loadClassCache();

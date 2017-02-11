@@ -21,18 +21,6 @@ twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
 
-# Assetic Configuration
-assetic:
-    debug:          %kernel.debug%
-    use_controller: false
-    # java: /usr/bin/java
-    filters:
-        cssrewrite: ~
-        # closure:
-        #     jar: %kernel.root_dir%/java/compiler.jar
-        # yui_css:
-        #     jar: %kernel.root_dir%/java/yuicompressor-2.4.2.jar
-
 # Doctrine Configuration
 doctrine:
     dbal:
